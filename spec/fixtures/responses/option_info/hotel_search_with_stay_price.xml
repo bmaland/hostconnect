@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="ISO-8859-1"?> 
+<!DOCTYPE Reply SYSTEM "http://217.206.100.98:8080/iComNew205/hostConnect_2_05_006.dtd"> 
+<Reply> 
+  <OptionInfoReply> 
+    <Option> 
+      <Opt>LONACHOINKCSTDBEB</Opt> 
+      <OptionNumber>15</OptionNumber> 
+      <OptGeneral> 
+        <SupplierId>11</SupplierId> 
+        <SupplierName>Holiday Inn Kings Cross</SupplierName> 
+        <Description>Bed &amp; Full English Breakfast</Description> 
+        <Comment>Standard Room</Comment> 
+        <Locality>KGX</Locality> 
+        <LocalityDescription>Kings Cross</LocalityDescription> 
+        <Class>3*</Class> 
+        <ClassDescription>3 Star</ClassDescription> 
+        <SType>Y</SType> 
+        <SCU>Night</SCU> 
+        <MinSCU>1</MinSCU> 
+        <MaxSCU>99</MaxSCU> 
+        <OptExtras> 
+          <OptExtra> 
+            <SequenceNumber>1</SequenceNumber> 
+            <Description>Porterage</Description> 
+            <IsPricePerPerson>Y</IsPricePerPerson> 
+          </OptExtra> 
+        </OptExtras> 
+        <VoucherName>Holiday Inn Kings Cross</VoucherName> 
+        <Address1>21 Fleet St</Address1> 
+        <Address2>London</Address2> 
+        <Address3></Address3> 
+        <Address4></Address4> 
+        <Address5></Address5> 
+        <PostCode>W1 4TG</PostCode> 
+        <Single_Avail>Y</Single_Avail> 
+        <Single_Ad_Max>1</Single_Ad_Max> 
+        <Twin_Avail>Y</Twin_Avail> 
+        <Twin_Ad_Max>2</Twin_Ad_Max> 
+        <Double_Avail>Y</Double_Avail> 
+        <Double_Ad_Max>2</Double_Ad_Max> 
+        <Triple_Avail>Y</Triple_Avail> 
+        <Triple_Ad_Max>3</Triple_Ad_Max> 
+        <Quad_Avail>N</Quad_Avail> 
+        <InfantsAllowed>Y</InfantsAllowed> 
+        <Infant_From>0</Infant_From> 
+        <Infant_To>3</Infant_To> 
+        <ChildrenAllowed>Y</ChildrenAllowed> 
+        <Child_From>4</Child_From> 
+        <Child_To>12</Child_To> 
+        <AdultsAllowed>Y</AdultsAllowed> 
+        <Adult_From>13</Adult_From> 
+        <Adult_To>99</Adult_To> 
+        <ButtonName>Accommodation</ButtonName> 
+      </OptGeneral> 
+      <OptStayResults> 
+        <Availability>RQ</Availability> 
+        <Currency>GBP</Currency> 
+        <TotalPrice>67200</TotalPrice> 
+        <RateName>Standard</RateName> 
+        <RateText>Standard</RateText> 
+      </OptStayResults> 
+    </Option> 
+    <Option> 
+      <Opt>LONACHOINKCROOMON</Opt> 
+      <OptionNumber>14</OptionNumber> 
+      <OptGeneral> 
+        <SupplierId>11</SupplierId> 
+        <SupplierName>Holiday Inn Kings Cross</SupplierName> 
+        <Description>Room Only</Description> 
+        <Comment>Standard Room</Comment> 
+        <Locality>KGX</Locality> 
+        <LocalityDescription>Kings Cross</LocalityDescription> 
+        <Class>3*</Class> 
+        <ClassDescription>3 Star</ClassDescription> 
+        <SType>Y</SType> 
+        <SCU>Night</SCU> 
+        <MinSCU>1</MinSCU> 
+        <MaxSCU>99</MaxSCU> 
+        <OptExtras> 
+          <OptExtra> 
+            <SequenceNumber>1</SequenceNumber> 
+            <Description>Porterage</Description> 
+            <IsPricePerPerson>Y</IsPricePerPerson> 
+          </OptExtra> 
+        </OptExtras> 
+        <VoucherName>Holiday Inn Kings Cross</VoucherName> 
+        <Address1>21 Fleet St</Address1> 
+        <Address2>London</Address2> 
+        <Address3></Address3> 
+        <Address4></Address4> 
+        <Address5></Address5> 
+        <PostCode>W1 4TG</PostCode> 
+        <Single_Avail>Y</Single_Avail> 
+        <Single_Ad_Max>1</Single_Ad_Max> 
+        <Twin_Avail>Y</Twin_Avail> 
+        <Twin_Ad_Max>2</Twin_Ad_Max> 
+        <Double_Avail>Y</Double_Avail> 
+        <Double_Ad_Max>2</Double_Ad_Max> 
+        <Triple_Avail>Y</Triple_Avail> 
+        <Triple_Ad_Max>3</Triple_Ad_Max> 
+        <Quad_Avail>N</Quad_Avail> 
+        <InfantsAllowed>Y</InfantsAllowed> 
+        <Infant_From>0</Infant_From> 
+        <Infant_To>3</Infant_To> 
+        <ChildrenAllowed>Y</ChildrenAllowed> 
+        <Child_From>4</Child_From> 
+        <Child_To>12</Child_To> 
+        <AdultsAllowed>Y</AdultsAllowed> 
+        <Adult_From>13</Adult_From> 
+        <Adult_To>99</Adult_To> 
+        <ButtonName>Accommodation</ButtonName> 
+      </OptGeneral> 
+      <OptStayResults> 
+        <Availability>RQ</Availability> 
+        <Currency>GBP</Currency> 
+        <TotalPrice>48000</TotalPrice> 
+        <RateName>Standard</RateName> 
+        <RateText>Standard</RateText> 
+      </OptStayResults> 
+    </Option> 
+    <Option> 
+      <Opt>LONACHOINKCSTDBCB</Opt> 
+      <OptionNumber>13</OptionNumber> 
+      <OptGeneral> 
+        <SupplierId>11</SupplierId> 
+        <SupplierName>Holiday Inn Kings Cross</SupplierName> 
+        <Description>Bed &amp; Continental Breakfast</Description> 
+        <Comment>Standard Room</Comment> 
+        <Locality>KGX</Locality> 
+        <LocalityDescription>Kings Cross</LocalityDescription> 
+        <Class>3*</Class> 
+        <ClassDescription>3 Star</ClassDescription> 
+        <SType>Y</SType> 
+        <SCU>Night</SCU> 
+        <MinSCU>1</MinSCU> 
+        <MaxSCU>99</MaxSCU> 
+        <OptExtras> 
+          <OptExtra> 
+            <SequenceNumber>1</SequenceNumber> 
+            <Description>Porterage</Description> 
+            <IsPricePerPerson>Y</IsPricePerPerson> 
+          </OptExtra> 
+        </OptExtras> 
+        <VoucherName>Holiday Inn Kings Cross</VoucherName> 
+        <Address1>21 Fleet St</Address1> 
+        <Address2>London</Address2> 
+        <Address3></Address3> 
+        <Address4></Address4> 
+        <Address5></Address5> 
+        <PostCode>W1 4TG</PostCode> 
+        <Single_Avail>Y</Single_Avail> 
+        <Single_Ad_Max>1</Single_Ad_Max> 
+        <Twin_Avail>Y</Twin_Avail> 
+        <Twin_Ad_Max>2</Twin_Ad_Max> 
+        <Double_Avail>Y</Double_Avail> 
+        <Double_Ad_Max>2</Double_Ad_Max> 
+        <Triple_Avail>Y</Triple_Avail> 
+        <Triple_Ad_Max>3</Triple_Ad_Max> 
+        <Quad_Avail>N</Quad_Avail> 
+        <InfantsAllowed>Y</InfantsAllowed> 
+        <Infant_From>0</Infant_From> 
+        <Infant_To>3</Infant_To> 
+        <ChildrenAllowed>Y</ChildrenAllowed> 
+        <Child_From>4</Child_From> 
+        <Child_To>12</Child_To> 
+        <AdultsAllowed>Y</AdultsAllowed> 
+        <Adult_From>13</Adult_From> 
+        <Adult_To>99</Adult_To> 
+        <ButtonName>Accommodation</ButtonName> 
+      </OptGeneral> 
+      <OptStayResults> 
+        <Availability>RQ</Availability> 
+        <Currency>GBP</Currency> 
+        <TotalPrice>57600</TotalPrice> 
+        <RateName>Standard</RateName> 
+        <RateText>Standard</RateText> 
+      </OptStayResults> 
+    </Option> 
+    <Option> 
+      <Opt>LONACBAILONSTDFUB</Opt> 
+      <OptionNumber>12</OptionNumber> 
+      <OptGeneral> 
+        <SupplierId>10</SupplierId> 
+        <SupplierName>Baileys London</SupplierName> 
+        <Description>Full Board</Description> 
+        <Comment>Standard Room</Comment> 
+        <Locality>PAD</Locality> 
+        <LocalityDescription>Paddington</LocalityDescription> 
+        <Class>4*</Class> 
+        <ClassDescription>4 Star</ClassDescription> 
+        <SType>Y</SType> 
+        <SCU>Night</SCU> 
+        <MinSCU>1</MinSCU> 
+        <MaxSCU>99</MaxSCU> 
+        <OptExtras> 
+          <OptExtra> 
+            <SequenceNumber>1</SequenceNumber> 
+            <Description>Porterage</Description> 
+            <IsPricePerPerson>Y</IsPricePerPerson> 
+          </OptExtra> 
+        </OptExtras> 
+        <VoucherName>Baileys London</VoucherName> 
+        <Address1>21 Fleet St</Address1> 
+        <Address2>London</Address2> 
+        <Address3></Address3> 
+        <Address4></Address4> 
+        <Address5></Address5> 
+        <PostCode>W1 4TG</PostCode> 
+        <Single_Avail>Y</Single_Avail> 
+        <Single_Ad_Max>1</Single_Ad_Max> 
+        <Twin_Avail>Y</Twin_Avail> 
+        <Twin_Ad_Max>2</Twin_Ad_Max> 
+        <Double_Avail>Y</Double_Avail> 
+        <Double_Ad_Max>2</Double_Ad_Max> 
+        <Triple_Avail>Y</Triple_Avail> 
+        <Triple_Ad_Max>3</Triple_Ad_Max> 
+        <Quad_Avail>N</Quad_Avail> 
+        <InfantsAllowed>Y</InfantsAllowed> 
+        <Infant_From>0</Infant_From> 
+        <Infant_To>3</Infant_To> 
+        <ChildrenAllowed>Y</ChildrenAllowed> 
+        <Child_From>4</Child_From> 
+        <Child_To>12</Child_To> 
+        <AdultsAllowed>Y</AdultsAllowed> 
+        <Adult_From>13</Adult_From> 
+        <Adult_To>99</Adult_To> 
+        <ButtonName>Accommodation</ButtonName> 
+      </OptGeneral> 
+      <OptStayResults> 
+        <Availability>RQ</Availability> 
+        <Currency>GBP</Currency> 
+        <TotalPrice>124800</TotalPrice> 
+        <RateName>Standard</RateName> 
+        <RateText>Standard</RateText> 
+      </OptStayResults> 
+    </Option> 
+    <Option> 
+      <Opt>LONACBAILONSTDBCB</Opt> 
+      <OptionNumber>10</OptionNumber> 
+      <OptGeneral> 
+        <SupplierId>10</SupplierId> 
+        <SupplierName>Baileys London</SupplierName> 
+        <Description>Bed &amp; Continental Breakfast</Description> 
+        <Comment>Standard Room</Comment> 
+        <Locality>PAD</Locality> 
+        <LocalityDescription>Paddington</LocalityDescription> 
+        <Class>4*</Class> 
+        <ClassDescription>4 Star</ClassDescription> 
+        <SType>Y</SType> 
+        <SCU>Night</SCU> 
+        <MinSCU>1</MinSCU> 
+        <MaxSCU>99</MaxSCU> 
+        <OptExtras> 
+          <OptExtra> 
+            <SequenceNumber>1</SequenceNumber> 
+            <Description>Porterage</Description> 
+            <IsPricePerPerson>Y</IsPricePerPerson> 
+          </OptExtra> 
+        </OptExtras> 
+        <VoucherName>Baileys London</VoucherName> 
+        <Address1>21 Fleet St</Address1> 
+        <Address2>London</Address2> 
+        <Address3></Address3> 
+        <Address4></Address4> 
+        <Address5></Address5> 
+        <PostCode>W1 4TG</PostCode> 
+        <Single_Avail>Y</Single_Avail> 
+        <Single_Ad_Max>1</Single_Ad_Max> 
+        <Twin_Avail>Y</Twin_Avail> 
+        <Twin_Ad_Max>2</Twin_Ad_Max> 
+        <Double_Avail>Y</Double_Avail> 
+        <Double_Ad_Max>2</Double_Ad_Max> 
+        <Triple_Avail>Y</Triple_Avail> 
+        <Triple_Ad_Max>3</Triple_Ad_Max> 
+        <Quad_Avail>N</Quad_Avail> 
+        <InfantsAllowed>Y</InfantsAllowed> 
+        <Infant_From>0</Infant_From> 
+        <Infant_To>3</Infant_To> 
+        <ChildrenAllowed>Y</ChildrenAllowed> 
+        <Child_From>4</Child_From> 
+        <Child_To>12</Child_To> 
+        <AdultsAllowed>Y</AdultsAllowed> 
+        <Adult_From>13</Adult_From> 
+        <Adult_To>99</Adult_To> 
+        <ButtonName>Accommodation</ButtonName> 
+      </OptGeneral> 
+      <OptStayResults> 
+        <Availability>RQ</Availability> 
+        <Currency>GBP</Currency> 
+        <TotalPrice>98400</TotalPrice> 
+        <RateName>Midweek</RateName> 
+        <RateText>Mon-Fri</RateText> 
+      </OptStayResults> 
+    </Option> 
+    <Option> 
+      <Opt>LONACCUMLONSUITE </Opt> 
+      <OptionNumber>9</OptionNumber> 
+      <OptGeneral> 
+        <SupplierId>1</SupplierId> 
+        <SupplierName>Cumberland Hotel</SupplierName> 
+        <Description>Bed &amp; Continental Breakfast</Description> 
+        <Comment>Suite</Comment> 
+        <Locality>PAD</Locality> 
+        <LocalityDescription>Paddington</LocalityDescription> 
+        <Class>4*</Class> 
+        <ClassDescription>4 Star</ClassDescription> 
+        <SType>Y</SType> 
+        <SCU>Night</SCU> 
+        <MinSCU>1</MinSCU> 
+        <MaxSCU>99</MaxSCU> 
+        <OptExtras> 
+          <OptExtra> 
+            <SequenceNumber>1</SequenceNumber> 
+            <Description>Porterage</Description> 
+            <IsPricePerPerson>Y</IsPricePerPerson> 
+          </OptExtra> 
+        </OptExtras> 
+        <VoucherName>Cumberland Hotel</VoucherName> 
+        <Address1>21 Fleet St</Address1> 
+        <Address2>London</Address2> 
+        <Address3></Address3> 
+        <Address4></Address4> 
+        <Address5></Address5> 
+        <PostCode>W1 4TG</PostCode> 
+        <Single_Avail>Y</Single_Avail> 
+        <Single_Ad_Max>1</Single_Ad_Max> 
+        <Twin_Avail>Y</Twin_Avail> 
+        <Twin_Ad_Max>2</Twin_Ad_Max> 
+        <Double_Avail>Y</Double_Avail> 
+        <Double_Ad_Max>2</Double_Ad_Max> 
+        <Triple_Avail>Y</Triple_Avail> 
+        <Triple_Ad_Max>3</Triple_Ad_Max> 
+        <Quad_Avail>N</Quad_Avail> 
+        <InfantsAllowed>Y</InfantsAllowed> 
+        <Infant_From>0</Infant_From> 
+        <Infant_To>3</Infant_To> 
+        <ChildrenAllowed>Y</ChildrenAllowed> 
+        <Child_From>4</Child_From> 
+        <Child_To>12</Child_To> 
+        <AdultsAllowed>Y</AdultsAllowed> 
+        <Adult_From>13</Adult_From> 
+        <Adult_To>99</Adult_To> 
+        <ButtonName>Accommodation</ButtonName> 
+      </OptGeneral> 
+      <OptStayResults> 
+        <Availability>RQ</Availability> 
+        <Currency>GBP</Currency> 
+        <TotalPrice>105600</TotalPrice> 
+        <RateName>Standard</RateName> 
+        <RateText>Standard</RateText> 
+      </OptStayResults> 
+    </Option> 
+    <Option> 
+      <Opt>LONACCUMLONROOMON</Opt> 
+      <OptionNumber>8</OptionNumber> 
+      <OptGeneral> 
+        <SupplierId>1</SupplierId> 
+        <SupplierName>Cumberland Hotel</SupplierName> 
+        <Description>Room Only</Description> 
+        <Comment>Standard Room</Comment> 
+        <Locality>PAD</Locality> 
+        <LocalityDescription>Paddington</LocalityDescription> 
+        <Class>4*</Class> 
+        <ClassDescription>4 Star</ClassDescription> 
+        <SType>Y</SType> 
+        <SCU>Night</SCU> 
+        <MinSCU>1</MinSCU> 
+        <MaxSCU>99</MaxSCU> 
+        <OptExtras> 
+          <OptExtra> 
+            <SequenceNumber>1</SequenceNumber> 
+            <Description>Porterage</Description> 
+            <IsPricePerPerson>Y</IsPricePerPerson> 
+          </OptExtra> 
+        </OptExtras> 
+        <VoucherName>Cumberland Hotel</VoucherName> 
+        <Address1>21 Fleet St</Address1> 
+        <Address2>London</Address2> 
+        <Address3></Address3> 
+        <Address4></Address4> 
+        <Address5></Address5> 
+        <PostCode>W1 4TG</PostCode> 
+        <Single_Avail>Y</Single_Avail> 
+        <Single_Ad_Max>1</Single_Ad_Max> 
+        <Twin_Avail>Y</Twin_Avail> 
+        <Twin_Ad_Max>2</Twin_Ad_Max> 
+        <Double_Avail>Y</Double_Avail> 
+        <Double_Ad_Max>2</Double_Ad_Max> 
+        <Triple_Avail>Y</Triple_Avail> 
+        <Triple_Ad_Max>3</Triple_Ad_Max> 
+        <Quad_Avail>N</Quad_Avail> 
+        <InfantsAllowed>Y</InfantsAllowed> 
+        <Infant_From>0</Infant_From> 
+        <Infant_To>3</Infant_To> 
+        <ChildrenAllowed>Y</ChildrenAllowed> 
+        <Child_From>4</Child_From> 
+        <Child_To>12</Child_To> 
+        <AdultsAllowed>Y</AdultsAllowed> 
+        <Adult_From>13</Adult_From> 
+        <Adult_To>99</Adult_To> 
+        <ButtonName>Accommodation</ButtonName> 
+      </OptGeneral> 
+      <OptStayResults> 
+        <Availability>RQ</Availability> 
+        <Currency>GBP</Currency> 
+        <TotalPrice>57600</TotalPrice> 
+        <RateName>Standard</RateName> 
+        <RateText>Standard</RateText> 
+      </OptStayResults> 
+    </Option> 
+    <Option> 
+      <Opt>LONACCUMLONSTDBCB</Opt> 
+      <OptionNumber>1</OptionNumber> 
+      <OptGeneral> 
+        <SupplierId>1</SupplierId> 
+        <SupplierName>Cumberland Hotel</SupplierName> 
+        <Description>Bed &amp; Continental Breakfast</Description> 
+        <Comment>Standard Room</Comment> 
+        <Locality>PAD</Locality> 
+        <LocalityDescription>Paddington</LocalityDescription> 
+        <Class>4*</Class> 
+        <ClassDescription>4 Star</ClassDescription> 
+        <SType>Y</SType> 
+        <SCU>Night</SCU> 
+        <MinSCU>1</MinSCU> 
+        <MaxSCU>99</MaxSCU> 
+        <OptExtras> 
+          <OptExtra> 
+            <SequenceNumber>1</SequenceNumber> 
+            <Description>Porterage</Description> 
+            <IsPricePerPerson>Y</IsPricePerPerson> 
+          </OptExtra> 
+        </OptExtras> 
+        <VoucherName>Cumberland Hotel</VoucherName> 
+        <Address1>21 Fleet St</Address1> 
+        <Address2>London</Address2> 
+        <Address3></Address3> 
+        <Address4></Address4> 
+        <Address5></Address5> 
+        <PostCode>W1 4TG</PostCode> 
+        <Single_Avail>Y</Single_Avail> 
+        <Single_Ad_Max>1</Single_Ad_Max> 
+        <Twin_Avail>Y</Twin_Avail> 
+        <Twin_Ad_Max>2</Twin_Ad_Max> 
+        <Double_Avail>Y</Double_Avail> 
+        <Double_Ad_Max>2</Double_Ad_Max> 
+        <Triple_Avail>Y</Triple_Avail> 
+        <Triple_Ad_Max>3</Triple_Ad_Max> 
+        <Quad_Avail>N</Quad_Avail> 
+        <InfantsAllowed>Y</InfantsAllowed> 
+        <Infant_From>0</Infant_From> 
+        <Infant_To>3</Infant_To> 
+        <ChildrenAllowed>Y</ChildrenAllowed> 
+        <Child_From>4</Child_From> 
+        <Child_To>12</Child_To> 
+        <AdultsAllowed>Y</AdultsAllowed> 
+        <Adult_From>13</Adult_From> 
+        <Adult_To>99</Adult_To> 
+        <ButtonName>Accommodation</ButtonName> 
+      </OptGeneral> 
+      <OptStayResults> 
+        <Availability>RQ</Availability> 
+        <Currency>GBP</Currency> 
+        <TotalPrice>67200</TotalPrice> 
+        <RateName>Standard</RateName> 
+        <RateText>Standard</RateText> 
+      </OptStayResults> 
+    </Option> 
+  </OptionInfoReply> 
+</Reply>

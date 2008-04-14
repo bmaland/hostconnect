@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Request SYSTEM "http://www.tourplan.com/support/Connector/hostConnect_2_05_300.dtd">
+<Request>
+  <OptionInfoRequest>
+    <AgentID>EURTAT</AgentID>
+    <Password>EURTAT</Password>
+    <Info>GNRI</Info>
+    <DateFrom>2007-10-01</DateFrom>
+    <Opt>LONAC????????????</Opt>
+  </OptionInfoRequest>
+</Request>

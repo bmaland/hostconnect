@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE Reply SYSTEM "http://217.206.100.98:8080/iComNew205/hostConnect_2_05_006.dtd">
+<Reply>
+  <GetLocationsReply>
+    <Locations>
+      <Location>
+        <Code>AAA</Code>
+        <Name>Andorra</Name>
+      </Location>
+      <Location>
+        <Code>AAB</Code>
+        <Name>Abu Dhabi</Name>
+      </Location>
+      <Location>
+        <Code>CAR</Code>
+        <Name>Co. Carlow</Name>
+      </Location>
+      <Location>
+        <Code>CAV</Code>
+        <Name>Co. Cavan</Name>
+      </Location>
+      <Location>
+        <Code>CLA</Code>
+        <Name>Co. Clare</Name>
+      </Location>
+      <Location>
+        <Code>COR</Code>
+        <Name>Co. Cork</Name>
+      </Location>
+      <Location>
+        <Code>DUB</Code>
+        <Name>Dublin</Name>
+      </Location>
+      <Location>
+        <Code>LON</Code>
+        <Name>London</Name>
+      </Location>
+      <Location>
+        <Code>MAD</Code>
+        <Name>Madrid</Name>
+      </Location>
+      <Location>
+        <Code>PAR</Code>
+        <Name>Paris</Name>
+      </Location>
+    </Locations>
+  </GetLocationsReply>
+</Reply>

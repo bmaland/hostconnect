@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="ISO-8859-1"?> 
+<!DOCTYPE Reply SYSTEM "http://217.206.100.98:8080/iComNew205/hostConnect_2_05_006.dtd"> 
+<Reply> 
+  <AgentInfoReply> 
+    <Currency>GBP</Currency> 
+    <Email></Email> 
+    <Name>European Tours &amp; Travel</Name> 
+    <PriceCodes>2ST</PriceCodes> 
+    <IsSubLogin>N</IsSubLogin> 
+    <HasBookingRights>N</HasBookingRights> 
+  </AgentInfoReply> 
+</Reply>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Request SYSTEM "http://www.tourplan.com/support/Connector/hostConnect_2_05_300.dtd">
+<Request>
+  <AddServiceRequest>
+    <AgentID>EURTAT</AgentID>
+    <Password>EURTAT</Password>
+    <NewBookingInfo>
+      <Name>Jessop Mr/Mrs</Name>
+      <QB>B</QB>
+    </NewBookingInfo>
+    <Opt>LONACCUMLONSTDBCB</Opt>
+    <DateFrom>2007-10-07</DateFrom>
+    <RoomConfigs>
+      <RoomConfig>
+        <Adults>2</Adults>
+        <RoomType>TW</RoomType>
+        <PaxList>
+          <PaxDetails>
+            <Title>Mr</Title>
+            <Forename>Rob</Forename>
+            <Surname>Jardim</Surname>
+            <PaxType>A</PaxType>
+          </PaxDetails>
+          <PaxDetails>
+            <Title>Mrs</Title>
+            <Forename>Sally</Forename>
+            <Surname>Jardim</Surname>
+            <PaxType>A</PaxType>
+          </PaxDetails>
+        </PaxList>
+      </RoomConfig>
+    </RoomConfigs>
+    <SCUqty>2</SCUqty>
+  </AddServiceRequest>
+</Request>
