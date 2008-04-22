@@ -9,6 +9,8 @@ require 'rake/contrib/rubyforgepublisher'
 
 PROJECT = 'hostconnect'
 
+task :default => 'specs'
+
 desc "Run specifications"
 Spec::Rake::SpecTask.new('specs') do |t|
   t.spec_opts = ["--format", "specdoc", "--colour"]
