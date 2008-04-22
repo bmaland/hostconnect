@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Request SYSTEM "http://www.tourplan.com/support/Connector/hostConnect_2_05_300.dtd">
+<Request>
+  <OptionInfoRequest>
+    <AgentID>EURTAT</AgentID>
+    <Password>EURTAT</Password>
+    <OptionNumber>10</OptionNumber>
+    <OptionNumber>15</OptionNumber>
+  </OptionInfoRequest>
+</Request>

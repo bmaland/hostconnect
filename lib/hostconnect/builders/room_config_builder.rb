@@ -9,7 +9,7 @@ module HostConnect
       x = Builder::XmlMarkup.new(:indent => 2)
       x.RoomConfig {
         (@valid_options - [ :pax_list ]).each do |opt|
-          eval "x.#{opt.camelize} #{opt}" if respond_to?(opt)
+          eval "x.#{opt.camelize} #{opt}"
         end
         
         if @pax_list

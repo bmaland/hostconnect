@@ -27,10 +27,10 @@ module HostConnect
       if options
         @options = options
         check_for_valid_options
-        set_attrs
       else
         @options = {}
       end
+      set_attrs
     end
     
     def check_for_valid_options
@@ -42,7 +42,12 @@ module HostConnect
     def set_attrs
       @options.each do |k,v|
         instance_variable_set("@#{k}", v)
-        self.class.class_eval "attr_accessor :#{k}"
+      end
+      
+      # It should be possible to set all options after the objects creation,
+      # from it's accessors
+      unless @valid_options.blank?
+        @valid_options.each { |k| self.class.class_eval "attr_accessor :#{k}" }
       end
     end
   end

@@ -29,30 +29,36 @@ module HostConnect
     end
     
     protected
-    # Parses XML into a XmlSimple object. The XML should be the response from a request.
+    # Parses XML into a XmlSimple object. The XML should be the response from a
+    # request.
     def parse(xml)
-      @data = XmlSimple.xml_in(xml)
+      @data = REXML::Document.new xml
+      
       # Raise an error if the server returned an error reply.
       raise "Error" if @data.blank?
-      raise ArgumentError, @data["ErrorReply"][0]["Error"][0] if @data["ErrorReply"]
+      raise ArgumentError, REXML::XPath.first(@data, ("///Error")).text unless
+        REXML::XPath.match(@data, "/Reply/ErrorReply").blank?
     end
     
     private
     def initialize(xml)
       parse xml
-      (instance_variable_defined?(:@attributes)) ? set_attrs : populate
+      (respond_to? "size") ? populate : set_attrs
     end
     
     # Sets all instance variables. This only works for the simple requests.
     # For convenience, an "attribute?" method is set for booleans.
     def set_attrs
-      @attributes.each do |i|
-        value = Coercion.coerce(@data[Inflector.demodulize(self.class) << "Reply"][0][i.camelize].to_s)
-        if value.kind_of?(FalseClass) or value.kind_of?(TrueClass)
-          eval "def #{i}?; #{i}; end"
+      raise "Error" if @data.blank?
+      class_name = Inflector.demodulize(self.class) << "Reply"
+      @data.elements.each("Reply/" << class_name << "/*") do |e|
+        var = e.name.underscore
+        value = Coercion.coerce(e.text)
+        if value.kind_of?(FalseClass) || value.kind_of?(TrueClass)
+          eval "def #{var}?; #{var}; end"
         end
-        instance_variable_set("@#{i}", value)
-        self.class.class_eval "attr_reader :#{i}"
+        instance_variable_set("@#{var}", value)
+        self.class.class_eval "attr_reader :#{var}"
       end
     end
   end

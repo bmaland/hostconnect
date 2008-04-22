@@ -26,7 +26,6 @@ module HostConnect
       result
     end
     
-    # Creates Time-objects from strings formed as "hhmm"
     def self.time(string)
       Time.parse(string[0,2] << ":" << string[2,4])
     end

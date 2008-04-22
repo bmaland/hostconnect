@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE Reply SYSTEM "http://217.206.100.98:8080/iComNew205/hostConnect_2_05_006.dtd">
+<Reply>
+  <OptionInfoReply>
+    <Option>
+      <Opt>LONACBAILONSTDBCB</Opt>
+      <OptionNumber>10</OptionNumber>
+    </Option>
+    <Option>
+      <Opt>LONACHOINKCSTDBEB</Opt>
+      <OptionNumber>15</OptionNumber>
+    </Option>
+  </OptionInfoReply>
+</Reply>

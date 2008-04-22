@@ -18,7 +18,7 @@ describe HostConnect::OptionInfoBuilder do
     req.to_s.should == @xml
   end
   
-  it "should return for hotel search with a room config (total stay price)" do
+  it "should return xml for hotel search with a room config (total stay price)" do
     @xml = File.read("./spec/fixtures/requests/option_info/hotel_search_total_stay_price.xml")
     
     room = RoomConfigBuilder.new(:adults => 2, :room_type => "TW")
@@ -31,6 +31,17 @@ describe HostConnect::OptionInfoBuilder do
       :date_from => "2007-10-03",
       :date_to => "2007-10-06"
     )
+    
+    req.to_s.should == @xml
+  end
+  
+  it "should return xml for option number search" do
+    @xml = File.read("./spec/fixtures/requests/option_info/option_number.xml")
+    
+    req = OptionInfoBuilder.new
+    req.agent_id = "EURTAT"
+    req.password = "EURTAT"
+    req.option_number = [10, 15]
     
     req.to_s.should == @xml
   end
