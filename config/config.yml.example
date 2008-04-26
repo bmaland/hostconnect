@@ -1,0 +1,6 @@
+hostconnect:
+  dtd: http://www.tourplan.com/support/Connector/hostConnect_2_05_300.dtd
+  host: 127.0.0.1
+  path: /
+  port: 80
+

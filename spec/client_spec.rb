@@ -3,8 +3,6 @@ require File.dirname(__FILE__) + "/spec_helper"
 describe HostConnect::Client do
   it "should have a http connection" do
     Client.http_connection.should be_an_instance_of(Net::HTTP)
-    Client.http_connection.port.should == 2000
-    Client.http_connection.address.should == "127.0.0.1"
   end
   
   it "should post xml requests" do

@@ -3,4 +3,5 @@ log/*
 doc/*
 coverage/*
 test.rb
+config.yml
 

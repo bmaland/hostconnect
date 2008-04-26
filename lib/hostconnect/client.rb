@@ -4,17 +4,6 @@ module HostConnect
     @@config = HostConnect::Config.new
     
     class << self
-      # Set configuration variables for the HTTP client.
-      # Settings:
-      #   * dtd
-      #   * host
-      #   * path
-      #   * port
-      def configure(&block)
-        raise ArgumentError, "Block must be provided to configure" unless block_given?
-        yield @@config
-      end
-      
       # Returns the config class-variable
       def config
         @@config
