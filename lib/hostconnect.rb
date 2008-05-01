@@ -11,7 +11,7 @@ $LOAD_PATH.unshift(pwd)
    active_support/core_ext/string yaml].each { |lib| require lib }
 
 # Require HostConnect files
-%w[config client response builder
+%w[client response builder
    coercion].each { |lib| require "#{pwd}/hostconnect/#{lib}" }
 
 Dir.glob("#{pwd}/hostconnect/builders/*.rb").each { |file| require file }

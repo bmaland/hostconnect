@@ -1,7 +1,15 @@
 module HostConnect
+  class << self
+    def setup(environment, config)
+      config[:dtd] =
+        'http://www.tourplan.com/support/Connector/hostConnect_' << config[:version] << '.dtd'
+      Client.config = OpenStruct.new config
+    end
+  end
+  
   # Has the responsibility for the http connections
   class Client
-    @@config = HostConnect::Config.new
+    @@config = nil
     
     class << self
       # Returns the config class-variable
@@ -9,11 +17,15 @@ module HostConnect
         @@config
       end
       
+      def config=(config)
+        @@config = config
+      end
+      
       # Posts a new xml request to the server, returning the response body
       def post_xml_request(xml)
         xml = xml.to_s unless xml.kind_of? String
         begin
-          req = Net::HTTP::Post.new(@@config.path)
+          req = Net::HTTP::Post.new(config.path)
           req['Content-Type'] = 'text/xml'
           req['Content-Length'] = xml.size.to_s
           response = http_connection.request(req, xml)
@@ -25,7 +37,7 @@ module HostConnect
       
       # Returns the http connection
       def http_connection
-        @@http ||= Net::HTTP.new(@@config.host, @@config.port)
+        @@http ||= Net::HTTP.new(config.host, config.port)
       end
     end
   end
