@@ -85,10 +85,7 @@ module HostConnect
                             when 5001 then "The specified ServiceLineUpdateCount is no longer valid; request rejected."
                             else           "Unknown error."
                             end
-                            
-                            
-                            
-        
+
         raise ArgumentError, error_msg << " (" << error_description << ")"
       end
     end
@@ -115,3 +112,4 @@ module HostConnect
     end
   end
 end
+
