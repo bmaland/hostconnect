@@ -36,8 +36,21 @@ module HostConnect
       
       # Raise an error if the server returned an error reply.
       raise "Error" if @data.blank?
-      raise ArgumentError, REXML::XPath.first(@data, ("///Error")).text unless
-        REXML::XPath.match(@data, "/Reply/ErrorReply").blank?
+      
+      error_reply = REXML::XPath.match(@data, "/Reply/ErrorReply")
+      unless error_reply.blank?
+        error_msg = error_reply[0][1].text
+        error_code = error_msg[0..3].to_i # Is this faster than using regexp?
+        
+        # See http://www.tourplan.com/support/Connector/ErrorMessages.html
+        error_description = case error_code
+                            when 1051 then "Agent not found (or wrong password given)."
+                            when 1052 then "Option not found."
+                            else           "Unknown error."
+                            end
+        
+        raise ArgumentError, error_msg << " (" << error_description << ")"
+      end
     end
     
     private
@@ -49,7 +62,6 @@ module HostConnect
     # Sets all instance variables. This only works for the simple requests.
     # For convenience, an "attribute?" method is set for booleans.
     def set_attrs
-      raise "Error" if @data.blank?
       class_name = Inflector.demodulize(self.class) << "Reply"
       @data.elements.each("Reply/" << class_name << "/*") do |e|
         var = e.name.underscore

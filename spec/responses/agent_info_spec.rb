@@ -18,6 +18,7 @@ describe HostConnect::AgentInfo do
   
   it "should raise error on incorrect login/pass" do
     error = File.read("./spec/fixtures/responses/agent_info_error.xml")
-    lambda { AgentInfo.new(error) }.should raise_error(ArgumentError, "1051 SCN EURTAT")
+    lambda { AgentInfo.new(error) }.should raise_error(ArgumentError,
+      "1051 SCN EURTAT (Agent not found (or wrong password given).)")
   end
 end
