@@ -18,7 +18,7 @@ module HostConnect
     def bare
       x = Builder::XmlMarkup.new(:indent => 2)
       x.instruct!
-      x.declare! :DOCTYPE, :Request, :SYSTEM, Client.config.dtd
+      x.declare! :DOCTYPE, :Request, :SYSTEM, HostConnect.config.dtd
       x
     end
     

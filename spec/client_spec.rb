@@ -8,7 +8,7 @@ describe HostConnect::Client do
   it "should post xml requests" do
     request = File.read("./spec/fixtures/requests/ping.xml")
     response = File.read("./spec/fixtures/responses/ping.xml")
-    config = Client.config
+    config = HostConnect.config
     
     Net::HTTP::Post.should_receive(:new).with(config.path).and_return({})
     mock = mock("response", :null_object => true)
