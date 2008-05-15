@@ -14,18 +14,19 @@ module HostConnect
     #
     # These must be converted to native Ruby types.
     def self.coerce(string)
-      result   = case string
-                 when /^[0-9]+\d*$/           then string.to_i
-                 when /\d{4}-\d\d-\d\d/       then Date.parse(string)
-                 when /^(\d+\s){2,}[0-9 ]*$/  then string.split.collect { |i| i.to_i }
-                 when /^\s*$/                 then nil
-                 when "Y"                     then true
-                 when "N"                     then false
-                 else                         string
-                 end
-      result
+      case string
+      when /^[0-9]+\d*$/           then string.to_i
+      when /\d{4}-\d\d-\d\d/       then Date.parse(string)
+      when /^(\d+\s){2,}[0-9 ]*$/  then string.split.collect { |i| i.to_i }
+      when /^\s*$/                 then nil
+      when "Y"                     then true
+      when "N"                     then false
+      else                         string
+      end
     end
     
+    # Currently we use a separate method for times, since they come in a format
+    # which probably is too general for regexp. I.e "2310"
     def self.time(string)
       Time.parse(string[0,2] << ":" << string[2,4])
     end

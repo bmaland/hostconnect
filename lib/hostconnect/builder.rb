@@ -23,13 +23,9 @@ module HostConnect
     end
     
     private
-    def initialize(options = nil)
-      if options
-        @options = options
-        check_for_valid_options
-      else
-        @options = {}
-      end
+    def initialize(options = {})
+      @options = options
+      check_for_valid_options
       set_attrs
     end
     

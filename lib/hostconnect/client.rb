@@ -4,7 +4,6 @@ module HostConnect
     class << self
       # Posts a new xml request to the server, returning the response body
       def post_xml_request(xml)
-        xml = xml.to_s unless xml.kind_of? String
         begin
           req = Net::HTTP::Post.new(HostConnect.config.path)
           req['Content-Type'] = 'text/xml'

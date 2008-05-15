@@ -93,14 +93,14 @@ module HostConnect
     private
     def initialize(xml)
       parse xml
-      (respond_to? "size") ? populate : set_attrs
+      (respond_to? :size) ? populate : set_attrs
     end
     
     # Sets all instance variables. This only works for the simple requests.
-    # For convenience, an "attribute?" method is set for booleans.
+    # For convenience, query methods gets defined for booleans.
     def set_attrs
       class_name = Inflector.demodulize(self.class) << "Reply"
-      @data.elements.each("Reply/" << class_name << "/*") do |e|
+      @data.elements.each("/Reply/" << class_name << "/*") do |e|
         var = e.name.underscore
         value = Coercion.coerce(e.text)
         if value.kind_of?(FalseClass) || value.kind_of?(TrueClass)
