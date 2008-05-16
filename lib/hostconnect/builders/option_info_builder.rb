@@ -1,6 +1,6 @@
 module HostConnect
   class OptionInfoBuilder < AbstractBuilder
-    def initialize(options = nil)
+    def initialize(options = {})
       @valid_options = [ :agent_id, :password, :opt, :option_number, :info,
         :date_from, :date_to, :scu_qty, :a_cache, :rate_convert, :room_config,
         :minimum_availability, :sort_field, :ascending, :index_first_option,

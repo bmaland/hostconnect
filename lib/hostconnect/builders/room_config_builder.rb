@@ -1,6 +1,6 @@
 module HostConnect
   class RoomConfigBuilder < AbstractBuilder
-    def initialize(options = nil)
+    def initialize(options = {})
       @valid_options = [ :adults, :room_type, :pax_list ].freeze
       super(options)
     end

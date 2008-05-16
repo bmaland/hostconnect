@@ -1,6 +1,6 @@
 module HostConnect
   class PaxDetailsBuilder < AbstractBuilder
-    def initialize(options = nil)
+    def initialize(options = {})
       @valid_options = [ :title, :forename, :surname, :pax_type ].freeze
       super(options)
     end
