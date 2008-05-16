@@ -34,9 +34,6 @@ module HostConnect
     def parse(xml)
       @data = REXML::Document.new xml
       
-      # Raise an error if the server returned an error reply.
-      raise "Error" if @data.blank?
-      
       error_reply = REXML::XPath.match(@data, "/Reply/ErrorReply")
       unless error_reply.blank?
         error_msg = error_reply[0][1].text
@@ -85,7 +82,8 @@ module HostConnect
                             when 5001 then "The specified ServiceLineUpdateCount is no longer valid; request rejected."
                             else           "Unknown error."
                             end
-
+        
+        HostConnect.logger.fatal "Exception thrown!"
         raise ArgumentError, error_msg << " (" << error_description << ")"
       end
     end

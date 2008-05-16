@@ -6,7 +6,7 @@ pwd = File.dirname(__FILE__)
 $LOAD_PATH.unshift(pwd)
 
 # Require dependencies
-%w[rubygems net/https builder xmlsimple date time ostruct
+%w[rubygems net/https builder date time ostruct
    active_support/inflector active_support/core_ext/blank
    active_support/core_ext/string yaml logger].each { |lib| require lib }
 
