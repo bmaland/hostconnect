@@ -1,15 +1,15 @@
 module HostConnect
   class OptionInfo < AbstractResponse
     include Enumerable
-    
+    @data
     def size
-      @hpricot.search("/Reply/OptionInfoReply/Option").size
+      @data.search("/Reply/OptionInfoReply/Option").size
     end
     
     private
     def populate
       @elements = []
-      @hpricot.search("/Reply/OptionInfoReply/Option").each do |option|
+      @data.search("/Reply/OptionInfoReply/Option").each do |option|
         s = OpenStruct.new
         option.containers.each do |field|
           next if field.innerHTML.blank?

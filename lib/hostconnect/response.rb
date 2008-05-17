@@ -32,9 +32,8 @@ module HostConnect
     # Parses XML into a XmlSimple object. The XML should be the response from a
     # request.
     def parse(xml)
-      @data = REXML::Document.new xml
-      @hpricot = Hpricot.XML xml
-      error_reply = @hpricot.search("/Reply/ErrorReply")
+      @data = Hpricot.XML xml
+      error_reply = @data.search("/Reply/ErrorReply")
       unless error_reply.blank?
         error_msg = (error_reply/'Error').innerHTML
         error_code = error_msg[0..3].to_i # Is this faster than using regexp?
@@ -98,7 +97,7 @@ module HostConnect
     # For convenience, query methods gets defined for booleans.
     def set_attrs
       class_name = Inflector.demodulize(self.class) << "Reply"
-      @hpricot.search("/Reply/" << class_name) do |n|
+      @data.search("/Reply/" << class_name) do |n|
         n.containers.each do |e|
           var = e.name.underscore
           value = Coercion.coerce(Hpricot.uxs(e.innerHTML)) # Need to figure out how to stop Hpricot from escaping entities
