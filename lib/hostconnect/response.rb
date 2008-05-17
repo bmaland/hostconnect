@@ -33,10 +33,10 @@ module HostConnect
     # request.
     def parse(xml)
       @data = REXML::Document.new xml
-      
-      error_reply = REXML::XPath.match(@data, "/Reply/ErrorReply")
+      @hpricot = Hpricot.XML xml
+      error_reply = @hpricot.search("/Reply/ErrorReply")
       unless error_reply.blank?
-        error_msg = error_reply[0][1].text
+        error_msg = (error_reply/'Error').innerHTML
         error_code = error_msg[0..3].to_i # Is this faster than using regexp?
         
         # See http://www.tourplan.com/support/Connector/ErrorMessages.html
@@ -98,14 +98,16 @@ module HostConnect
     # For convenience, query methods gets defined for booleans.
     def set_attrs
       class_name = Inflector.demodulize(self.class) << "Reply"
-      @data.elements.each("/Reply/" << class_name << "/*") do |e|
-        var = e.name.underscore
-        value = Coercion.coerce(e.text)
-        if value.kind_of?(FalseClass) || value.kind_of?(TrueClass)
-          eval "def #{var}?; #{var}; end"
+      @hpricot.search("/Reply/" << class_name) do |n|
+        n.containers.each do |e|
+          var = e.name.underscore
+          value = Coercion.coerce(Hpricot.uxs(e.innerHTML)) # Need to figure out how to stop Hpricot from escaping entities
+          if value.kind_of?(FalseClass) || value.kind_of?(TrueClass)
+            eval "def #{var}?; #{var}; end"
+          end
+          instance_variable_set("@#{var}", value)
+          self.class.class_eval "attr_reader :#{var}"
         end
-        instance_variable_set("@#{var}", value)
-        self.class.class_eval "attr_reader :#{var}"
       end
     end
   end

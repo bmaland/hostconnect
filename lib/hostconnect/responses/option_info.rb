@@ -3,17 +3,17 @@ module HostConnect
     include Enumerable
     
     def size
-      @data.elements.to_a("/Reply/OptionInfoReply/Option").size
+      @hpricot.search("/Reply/OptionInfoReply/Option").size
     end
     
     private
     def populate
       @elements = []
-      @data.elements.to_a("/Reply/OptionInfoReply/Option").each do |option|
+      @hpricot.search("/Reply/OptionInfoReply/Option").each do |option|
         s = OpenStruct.new
-        option.elements.each do |field|
-          next if field.text.nil? or field.text.blank?
-          eval "s.#{field.name.underscore} = \"#{field.text}\""
+        option.containers.each do |field|
+          next if field.innerHTML.blank?
+          eval "s.#{field.name.underscore} = \"#{field.innerHTML}\""
         end
         @elements << s
       end
