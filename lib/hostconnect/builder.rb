@@ -7,7 +7,7 @@ module HostConnect
       to_xml.target!
     end
     
-    # Send xml to server.
+    # Send xml to server. Returns a new object.
     def submit
       obj = Inflector.constantize(self.class.to_s.gsub(/Builder/, ''))
       obj.new( Client.post_xml_request(to_s) )

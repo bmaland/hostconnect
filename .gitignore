@@ -3,4 +3,5 @@ doc/*
 coverage/*
 test.rb
 config.yml
+*.swp
 

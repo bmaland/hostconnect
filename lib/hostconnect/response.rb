@@ -29,14 +29,12 @@ module HostConnect
     end
     
     protected
-    # Parses XML into a XmlSimple object. The XML should be the response from a
-    # request.
     def parse(xml)
       @data = Hpricot.XML xml
-      error_reply = @data.search("/Reply/ErrorReply")
+      error_reply = @data.search("/Reply/ErrorReply/Error")
       unless error_reply.blank?
-        error_msg = (error_reply/'Error').innerHTML
-        error_code = error_msg[0..3].to_i # Is this faster than using regexp?
+        error_msg = error_reply.innerHTML
+        error_code = error_msg[0..3].to_i
         
         # See http://www.tourplan.com/support/Connector/ErrorMessages.html
         error_description = case error_code
