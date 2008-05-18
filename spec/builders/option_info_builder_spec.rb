@@ -27,7 +27,7 @@ describe HostConnect::OptionInfoBuilder do
       :password => "EURTAT",
       :opt => "LONAC????????????",
       :info => "GS",
-      :room_config => room,
+      :room_configs => [ room ],
       :date_from => "2007-10-03",
       :date_to => "2007-10-06"
     )
@@ -41,7 +41,7 @@ describe HostConnect::OptionInfoBuilder do
     req = OptionInfoBuilder.new
     req.agent_id = "EURTAT"
     req.password = "EURTAT"
-    req.option_number = [10, 15]
+    req.option_number = [ 10, 15 ]
     
     req.to_s.should == @xml
   end

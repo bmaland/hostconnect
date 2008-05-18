@@ -6,7 +6,7 @@ module HostConnect
     end
     
     def to_xml
-      x = Builder::XmlMarkup.new(:indent => 2)
+      x = Builder::XmlMarkup.new(:indent => 2, :margin => 5)
       x.PaxDetails {
         @valid_options.each do |opt|
           eval "x.#{opt.camelize} #{opt}"

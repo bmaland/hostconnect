@@ -8,8 +8,6 @@
       <Name>Jessop Mr/Mrs</Name>
       <QB>B</QB>
     </NewBookingInfo>
-    <Opt>LONACCUMLONSTDBCB</Opt>
-    <DateFrom>2007-10-07</DateFrom>
     <RoomConfigs>
       <RoomConfig>
         <Adults>2</Adults>
@@ -30,6 +28,8 @@
         </PaxList>
       </RoomConfig>
     </RoomConfigs>
+    <Opt>LONACCUMLONSTDBCB</Opt>
+    <DateFrom>2007-10-07</DateFrom>
     <SCUqty>2</SCUqty>
   </AddServiceRequest>
 </Request>

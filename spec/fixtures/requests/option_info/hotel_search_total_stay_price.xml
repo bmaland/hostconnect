@@ -9,10 +9,10 @@
     <DateTo>2007-10-06</DateTo>
     <Opt>LONAC????????????</Opt>
     <RoomConfigs>
-<RoomConfig>
-  <Adults>2</Adults>
-  <RoomType>TW</RoomType>
-</RoomConfig>
+      <RoomConfig>
+        <Adults>2</Adults>
+        <RoomType>TW</RoomType>
+      </RoomConfig>
     </RoomConfigs>
   </OptionInfoRequest>
 </Request>

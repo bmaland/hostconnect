@@ -2,7 +2,7 @@ module HostConnect
   class OptionInfoBuilder < AbstractBuilder
     def initialize(options = {})
       @valid_options = [ :agent_id, :password, :opt, :option_number, :info,
-        :date_from, :date_to, :scu_qty, :a_cache, :rate_convert, :room_config,
+        :date_from, :date_to, :scu_qty, :a_cache, :rate_convert, :room_configs,
         :minimum_availability, :sort_field, :ascending, :index_first_option,
         :maximum_options, :note_category, :location_code, :locality_description,
         :class_description, :description, :supplier_name, :rate_per_scu ].freeze
@@ -18,7 +18,7 @@ module HostConnect
           
           # Has to substract from @valid_options instead of @options, because
           # we have to guarantee the order of elements.
-          (@valid_options - [ :room_config, :opt, :option_number ]).each do |opt|
+          (@valid_options - [ :room_configs, :opt, :option_number ]).each do |opt|
             # Requestify turns Id into ID
             
             # TODO: I guess this could be done with less eval usage.
@@ -35,14 +35,10 @@ module HostConnect
             @option_number.each { |o| x.OptionNumber o }
           end
           
-          if @room_config
+          if @room_configs
             # Stack the room configs onto the request
             x.RoomConfigs { |i|
-              if @room_config.kind_of?(Array)
-                @room_config.each { |room| i << room.to_xml.target! }
-              else
-                i << @room_config.to_xml.target!
-              end
+              @room_configs.each { |room| i << room.to_xml.target! }
             }
           end
         }

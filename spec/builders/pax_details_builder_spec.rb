@@ -3,12 +3,12 @@ require File.dirname(__FILE__) + "/../spec_helper"
 describe HostConnect::PaxDetailsBuilder do
   before(:each) do
     @pax_xml = <<-END
-<PaxDetails>
-  <Title>Mr</Title>
-  <Forename>Rob</Forename>
-  <Surname>Jardim</Surname>
-  <PaxType>A</PaxType>
-</PaxDetails>
+          <PaxDetails>
+            <Title>Mr</Title>
+            <Forename>Rob</Forename>
+            <Surname>Jardim</Surname>
+            <PaxType>A</PaxType>
+          </PaxDetails>
 END
   end
   

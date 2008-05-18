@@ -6,20 +6,16 @@ module HostConnect
     end
     
     def to_xml
-      x = Builder::XmlMarkup.new(:indent => 2)
+      x = Builder::XmlMarkup.new(:indent => 2, :margin => 3)
       x.RoomConfig {
         (@valid_options - [ :pax_list ]).each do |opt|
           eval "x.#{opt.camelize} #{opt}"
         end
         
         if @pax_list
-          # Stack the PaxDetails builder objects
+          # Stack the PaxDetails builder objects onto the request
           x.PaxList { |i|
-            if @pax_list.kind_of?(Array)
-              @pax_list.each { |pax| i << pax.to_xml.target! }
-            else
-              i << @pax_list.to_xml.target!
-            end
+            @pax_list.each { |pax| i << pax.to_xml.target! }
           }
         end
       }
