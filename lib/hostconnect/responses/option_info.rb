@@ -1,7 +1,7 @@
 module HostConnect
   class OptionInfo < AbstractResponse
     include Enumerable
-    @data
+    
     def size
       @data.search("/Reply/OptionInfoReply/Option").size
     end
