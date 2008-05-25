@@ -1,16 +1,16 @@
 module HostConnect
-  class GetLocations < AbstractResponse
+  class GetServices < AbstractResponse
     include Enumerable
     
     def size
-      @size ||= @data.search("/Reply/GetLocationsReply/Locations/Location").size
+      @size ||= @data.search("/Reply/GetServicesReply/TPLServices/TPLService").size
     end
     
     private
     def populate
       @elements = []
       
-      @data.search("/Reply/GetLocationsReply/Locations/Location").each do |location|
+      @data.search("/Reply/GetServicesReply/TPLServices/TPLService").each do |location|
         s = OpenStruct.new
         s.code = (location/"Code").innerHTML
         s.name = (location/"Name").innerHTML
