@@ -15,4 +15,8 @@ describe HostConnect::Ping do
     ping = Ping.new(@response)
     lambda { ping.first }.should raise_error
   end
+  
+  it "should have a string representation" do
+    Ping.new(@response).to_s.should == "iS 2.05.048"
+  end
 end

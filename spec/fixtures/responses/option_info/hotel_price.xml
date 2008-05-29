@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE Reply SYSTEM "http://www.tourplan.com/support/connector/hostConnect_2_04_170.dtd">
+<Reply>
+  <OptionInfoReply>
+    <Option>
+      <Opt>BERACBERGRABB    </Opt>
+      <OptionNumber>4772</OptionNumber>
+      <OptStayResults>
+        <Availability>RQ</Availability>
+        <Currency>EUR</Currency>
+        <TotalPrice>34800</TotalPrice>
+        <RateName>Standard</RateName>
+        <RateText>Standard</RateText>
+      </OptStayResults>
+    </Option>
+  </OptionInfoReply>
+</Reply>

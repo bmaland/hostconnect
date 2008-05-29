@@ -20,4 +20,14 @@ describe HostConnect::OptionInfo do
     first = option_info.first
     first.opt.should == "LONACHOINKCSTDBEB"
   end
+  
+  it "should be possible to read stay results" do
+    @response = File.read("./spec/fixtures/responses/option_info/hotel_price.xml")
+    option_info = OptionInfo.new(@response).first
+    option_info.opt.should == "BERACBERGRABB"
+    option_info.option_number.should == 4772
+    option_info.stay_results.availability.should == "RQ"
+    option_info.stay_results.currency.should == "EUR"
+    option_info.stay_results.total_price.should == 34800
+  end
 end

@@ -11,7 +11,8 @@ module HostConnect
       @elements = []
       
       @data.search("/Reply/SupplierInfoReply/Suppliers/Supplier").each do |supplier|
-        s = OpenStruct.new
+        s = Struct.new(:supplier_id, :supplier_code, :name, :address1, :address2,
+                       :address3, :address4, :address5, :post_code, :supplier_note).new
         s.supplier_id = (supplier/"SupplierId").innerHTML
         s.supplier_code = (supplier/"SupplierCode").innerHTML
         s.name = (supplier/"Name").innerHTML

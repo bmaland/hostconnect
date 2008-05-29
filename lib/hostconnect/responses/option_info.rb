@@ -11,10 +11,20 @@ module HostConnect
       @elements = []
       @data.search("/Reply/OptionInfoReply/Option").each do |option|
         s = OpenStruct.new
-        option.containers.each do |field|
-          next if field.innerHTML.blank?
-          eval "s.#{field.name.underscore} = \"#{field.innerHTML}\""
+        s.opt = (option/"Opt").innerHTML
+        s.option_number = Coercion.coerce((option/"OptionNumber").innerHTML)
+        
+        stay_results = (option/"OptStayResults") 
+        unless stay_results.blank?
+          r = Struct.new(:availability, :currency, :total_price, :rate_name, :rate_text).new
+          r.availability = (stay_results/"Availability").innerHTML
+          r.currency = (stay_results/"Currency").innerHTML
+          r.total_price = Coercion.coerce((stay_results/"TotalPrice").innerHTML)
+          r.rate_name = (stay_results/"RateName").innerHTML
+          r.rate_text = (stay_results/"RateText").innerHTML
+          s.stay_results = r
         end
+       
         @elements << s
       end
       

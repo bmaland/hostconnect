@@ -11,7 +11,7 @@ module HostConnect
       @elements = []
       
       @data.search("/Reply/GetLocationsReply/Locations/Location").each do |location|
-        s = OpenStruct.new
+        s = Struct.new(:code, :name).new
         s.code = (location/"Code").innerHTML
         s.name = (location/"Name").innerHTML
         @elements << s
