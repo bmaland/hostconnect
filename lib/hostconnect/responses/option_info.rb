@@ -3,7 +3,7 @@ module HostConnect
     include Enumerable
     
     def size
-      @data.search("/Reply/OptionInfoReply/Option").size
+      @size ||= @data.search("/Reply/OptionInfoReply/Option").size
     end
     
     private
@@ -14,12 +14,22 @@ module HostConnect
         s.opt = Coercion.coerce((option/"Opt").innerHTML)
         s.option_number = Coercion.coerce((option/"OptionNumber").innerHTML)
         
+        general = (option/"OptGeneral")
+        unless general.blank?
+          r = Struct.new(:description, :comment, :periods).new
+          r.description = (general/"Description").first.innerHTML
+          r.comment = (general/"Comment").innerHTML
+          r.periods = (general/"Periods").innerHTML.to_i
+          
+          s.general = r
+        end
+        
         stay_results = (option/"OptStayResults")
         unless stay_results.blank?
           r = Struct.new(:availability, :currency, :total_price, :rate_name, :rate_text).new
           r.availability = (stay_results/"Availability").innerHTML
           r.currency = (stay_results/"Currency").innerHTML
-          r.total_price = Coercion.coerce((stay_results/"TotalPrice").innerHTML)
+          r.total_price = Coercion.price((stay_results/"TotalPrice").innerHTML)
           r.rate_name = (stay_results/"RateName").innerHTML
           r.rate_text = (stay_results/"RateText").innerHTML
           

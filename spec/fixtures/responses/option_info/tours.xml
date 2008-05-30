@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE Reply SYSTEM "http://www.tourplan.com/support/connector/hostConnect_2_04_170.dtd">
+<Reply>
+  <OptionInfoReply>
+    <Option>
+      <Opt>OSLRTASFIPA10002O</Opt>
+      <OptionNumber>5624</OptionNumber>
+      <OptGeneral>
+        <SupplierId>2773</SupplierId>
+        <SupplierName>Authentic Scandinavia Tours</SupplierName>
+        <Description>Norway in a Nutshell</Description>
+        <Comment>Cat2/Start Oslo</Comment>
+        <Locality>FIT</Locality>
+        <LocalityDescription>Round-trips</LocalityDescription>
+        <Periods>5</Periods>
+        <SType>P</SType>
+        <VoucherName>Authentic Scandinavia Tours</VoucherName>
+        <Address1></Address1>
+        <Address2></Address2>
+        <Address3></Address3>
+        <Address4></Address4>
+        <Address5></Address5>
+        <PostCode></PostCode>
+        <Single_Avail>Y</Single_Avail>
+        <Single_Ad_Max>1</Single_Ad_Max>
+        <Twin_Avail>Y</Twin_Avail>
+        <Twin_Ad_Max>2</Twin_Ad_Max>
+        <Double_Avail>Y</Double_Avail>
+        <Double_Ad_Max>2</Double_Ad_Max>
+        <Triple_Avail>Y</Triple_Avail>
+        <Triple_Ad_Max>3</Triple_Ad_Max>
+        <Quad_Avail>Y</Quad_Avail>
+        <Quad_Ad_Max>4</Quad_Ad_Max>
+        <InfantsAllowed>Y</InfantsAllowed>
+        <ChildrenAllowed>Y</ChildrenAllowed>
+        <AdultsAllowed>Y</AdultsAllowed>
+      </OptGeneral>
+    </Option>
+    <Option>
+      <Opt>OSLRTASFIPA10001O</Opt>
+      <OptionNumber>5614</OptionNumber>
+      <OptGeneral>
+        <SupplierId>2773</SupplierId>
+        <SupplierName>Authentic Scandinavia Tours</SupplierName>
+        <Description>Norway in a Nutshell</Description>
+        <Comment>Cat1/Start Oslo</Comment>
+        <Locality>FIT</Locality>
+        <LocalityDescription>Round-trips</LocalityDescription>
+        <Periods>5</Periods>
+        <SType>P</SType>
+        <VoucherName>Authentic Scandinavia Tours</VoucherName>
+        <Address1></Address1>
+        <Address2></Address2>
+        <Address3></Address3>
+        <Address4></Address4>
+        <Address5></Address5>
+        <PostCode></PostCode>
+        <Single_Avail>Y</Single_Avail>
+        <Single_Ad_Max>1</Single_Ad_Max>
+        <Twin_Avail>Y</Twin_Avail>
+        <Twin_Ad_Max>2</Twin_Ad_Max>
+        <Double_Avail>Y</Double_Avail>
+        <Double_Ad_Max>2</Double_Ad_Max>
+        <Triple_Avail>Y</Triple_Avail>
+        <Triple_Ad_Max>3</Triple_Ad_Max>
+        <Quad_Avail>Y</Quad_Avail>
+        <Quad_Ad_Max>4</Quad_Ad_Max>
+        <InfantsAllowed>Y</InfantsAllowed>
+        <ChildrenAllowed>Y</ChildrenAllowed>
+        <AdultsAllowed>Y</AdultsAllowed>
+      </OptGeneral>
+    </Option>
+  </OptionInfoReply>
+</Reply>

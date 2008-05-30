@@ -28,7 +28,7 @@ describe HostConnect::OptionInfo do
     option_info.option_number.should == 4772
     option_info.stay_results.availability.should == "RQ"
     option_info.stay_results.currency.should == "EUR"
-    option_info.stay_results.total_price.should == 34800
+    option_info.stay_results.total_price.should == 348
   end
   
   it "should be possible to read rates" do
@@ -36,5 +36,13 @@ describe HostConnect::OptionInfo do
     option_info = OptionInfo.new(@response).first
     option_info.rates.currency.should == "GBP"
     option_info.rates.rate.room_rates.single_rate.should == 120
+  end
+  
+  it "should be possible to read general info" do
+    @response = File.read("./spec/fixtures/responses/option_info/tours.xml")
+    option_info = OptionInfo.new(@response).first
+    option_info.general.comment.should == "Cat2/Start Oslo"
+    option_info.general.description.should == "Norway in a Nutshell"
+    option_info.general.periods.should == 5
   end
 end
