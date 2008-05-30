@@ -30,4 +30,11 @@ describe HostConnect::OptionInfo do
     option_info.stay_results.currency.should == "EUR"
     option_info.stay_results.total_price.should == 34800
   end
+  
+  it "should be possible to read rates" do
+    @response = File.read("./spec/fixtures/responses/option_info/hotel_search.xml")
+    option_info = OptionInfo.new(@response).first
+    option_info.rates.currency.should == "GBP"
+    option_info.rates.rate.room_rates.single_rate.should == 120
+  end
 end

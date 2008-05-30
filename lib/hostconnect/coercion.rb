@@ -21,7 +21,7 @@ module HostConnect
       when /^\s*$/                 then nil
       when "Y"                     then true
       when "N"                     then false
-      else                         string
+      else                         string.strip
       end
     end
     
@@ -29,6 +29,10 @@ module HostConnect
     # which probably is too general for regexp. I.e "2310"
     def self.time(string)
       Time.parse(string[0,2] << ":" << string[2,4])
+    end
+    
+    def self.price(string)
+      string.to_i / 100
     end
   end
 end
