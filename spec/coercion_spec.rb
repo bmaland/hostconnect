@@ -43,4 +43,9 @@ describe HostConnect::Coercion do
     
     Coercion.coerce("1 2 3 f 4").should be_an_instance_of(String)
   end
+
+  it "should divide prices by 100" do
+    p = Coercion.price("10000")
+    p.should == 100
+  end
 end

@@ -1,5 +1,6 @@
 module HostConnect
   class RoomConfigBuilder < AbstractBuilder
+    # Room types: SG  (single), TW (twin), DB  (double), TR (triple), QD (quad)
     def initialize(options = {})
       @valid_options = [ :adults, :room_type, :pax_list ].freeze
       super(options)
