@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE Reply SYSTEM "http://www.tourplan.com/support/connector/hostConnect_2_04_170.dtd">
+<Reply>
+  <AddServiceReply>
+    <BookingId>6050</BookingId>
+    <Ref>ASIN100101</Ref>
+    <ServiceLineId>55418</ServiceLineId>
+    <SequenceNumber>10</SequenceNumber>
+    <Status>RQ</Status>
+  </AddServiceReply>
+</Reply>

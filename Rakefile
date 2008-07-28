@@ -16,7 +16,7 @@ Spec::Rake::SpecTask.new('spec') do |t|
   t.spec_opts = ["--format", "specdoc", "--colour"]
   t.spec_files = FileList[(ENV['FILES'] || 'spec/**/*_spec.rb')]
   unless ENV["NO_RCOV"]
-    t.rcov = true
+    #t.rcov = true
     t.rcov_opts = ['--exclude', 'spec']
   end
 end
