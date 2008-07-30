@@ -88,7 +88,7 @@ module HostConnect
     private
     def initialize(xml)
       parse xml
-      (respond_to? :size) ? populate : set_attrs
+      private_methods.include?("populate") ? populate : set_attrs
     end
 
     # Sets all instance variables. This only works for the simple requests.
