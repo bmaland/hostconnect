@@ -1,7 +1,4 @@
-nbproject
-doc/*
-coverage/*
+doc
+coverage
 test.rb
 config.yml
-*.swp
-
