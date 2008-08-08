@@ -44,7 +44,7 @@ module HostConnect
           x.UserText1 @user_text1 if @user_text1
           x.UserText2 @user_text2 if @user_text2
           x.UserText3 @user_text3 if @user_text3
-          x.UserText4((@user_text4) ? "T" : "F")
+          x.UserText4 Coercion.to_hc(@user_text4) unless @user_text4.nil?
           x.UserText5 @user_text5 if @user_text5
         }
       }

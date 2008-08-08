@@ -11,8 +11,8 @@ module HostConnect
       @elements = []
       @data.search("/Reply/OptionInfoReply/Option").each do |option|
         s = OpenStruct.new
-        s.opt = Coercion.coerce((option/"Opt").innerHTML)
-        s.option_number = Coercion.coerce((option/"OptionNumber").innerHTML)
+        s.opt = Coercion.from_hc((option/"Opt").innerHTML)
+        s.option_number = Coercion.from_hc((option/"OptionNumber").innerHTML)
 
         general = (option/"OptGeneral")
         unless general.blank?

@@ -103,7 +103,7 @@ module HostConnect
           if var =~ /_price$/
             value = Coercion.price(Hpricot.uxs(e.innerHTML))
           else
-            value = Coercion.coerce(Hpricot.uxs(e.innerHTML))
+            value = Coercion.from_hc(Hpricot.uxs(e.innerHTML))
           end
 
           if value.kind_of?(FalseClass) || value.kind_of?(TrueClass)
