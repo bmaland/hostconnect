@@ -9,7 +9,8 @@ module HostConnect
     def initialize(options = {})
       @valid_options = [ :agent_id, :password, :new_booking_info, :opt, :date_from,
                          :scu_qty, :room_configs, :email, :pu_time, :pu_remark,
-                         :do_time, :do_remark, :remarks ].freeze
+                         :do_time, :do_remark, :remarks, :user_text1, :user_text2,
+                         :user_text3, :user_text4, :user_text5 ].freeze
       super(options)
     end
 
@@ -40,6 +41,11 @@ module HostConnect
           x.doTime @do_time if @do_time
           x.doRemark @do_remark if @do_remark
           x.Remarks @remarks if @remarks
+          x.UserText1 @user_text1 if @user_text1
+          x.UserText2 @user_text2 if @user_text2
+          x.UserText3 @user_text3 if @user_text3
+          x.UserText4((@user_text4) ? "T" : "F")
+          x.UserText5 @user_text5 if @user_text5
         }
       }
       x

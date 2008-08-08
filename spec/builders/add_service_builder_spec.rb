@@ -24,6 +24,12 @@ describe HostConnect::AddServiceBuilder do
     req.date_from = "2007-10-07"
     req.scu_qty = "2"
 
+    req.user_text1 = "+4799999999"
+    req.user_text2 = "contact@email.net"
+    req.user_text3 = "Norway"
+    req.user_text4 = false
+    req.user_text5 = "Smoking"
+
     req.to_s.should == @xml
   end
 end
