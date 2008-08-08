@@ -17,12 +17,14 @@
             <Title>Mr</Title>
             <Forename>Rob</Forename>
             <Surname>Jardim</Surname>
+            <DateOfBirth>1980-12-24</DateOfBirth>
             <PaxType>A</PaxType>
           </PaxDetails>
           <PaxDetails>
             <Title>Mrs</Title>
             <Forename>Sally</Forename>
             <Surname>Jardim</Surname>
+            <DateOfBirth>1980-12-24</DateOfBirth>
             <PaxType>A</PaxType>
           </PaxDetails>
         </PaxList>

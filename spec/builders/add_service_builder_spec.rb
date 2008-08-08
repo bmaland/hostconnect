@@ -11,10 +11,11 @@ describe HostConnect::AddServiceBuilder do
     req.new_booking_info = NewBookingInfoBuilder.new(:name => "Jessop Mr/Mrs", :qb => "B")
 
     pax1 = PaxDetailsBuilder.new(:title => "Mr", :forename => "Rob",
-                                 :surname => "Jardim",
-      :pax_type => "A")
+                                 :surname => "Jardim", :pax_type => "A",
+                                 :date_of_birth => "1980-12-24")
     pax2 = PaxDetailsBuilder.new(:title => "Mrs", :forename => "Sally",
-                                 :surname => "Jardim", :pax_type => "A")
+                                 :surname => "Jardim", :pax_type => "A",
+                                 :date_of_birth => "1980-12-24")
 
     room = RoomConfigBuilder.new(:adults => 2, :room_type => "TW",
                                  :pax_list => [ pax1, pax2 ])

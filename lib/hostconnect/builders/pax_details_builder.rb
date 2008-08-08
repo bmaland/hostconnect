@@ -1,10 +1,10 @@
 module HostConnect
   class PaxDetailsBuilder < AbstractBuilder
     def initialize(options = {})
-      @valid_options = [ :title, :forename, :surname, :pax_type ].freeze
+      @valid_options = [ :title, :forename, :surname, :date_of_birth, :pax_type ].freeze
       super(options)
     end
-    
+
     def to_xml
       x = Builder::XmlMarkup.new(:indent => 2, :margin => 5)
       x.PaxDetails {
