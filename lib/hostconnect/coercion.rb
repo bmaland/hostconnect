@@ -12,25 +12,39 @@ module HostConnect
     # * Integer list (In an integer list, a single space is used to separate integer values.)
     # * Price (Prices returned are Tourplan prices multiplied by 100, + currency stuff..)
     #
-    # These must be converted to native Ruby types.
-    def self.coerce(string)
-      case string
-      when /^[0-9]+\d*$/           then string.to_i
-      when /\d{4}-\d\d-\d\d/       then Date.parse(string)
-      when /^(\d+\s){2,}[0-9 ]*$/  then string.split.collect { |i| i.to_i }
+    # It must be possible to convert this data from/to native Ruby objects
+
+    # Convert HostConnect formatted data to Ruby objects
+    def self.from_hc(data)
+      case data
+      when /^[0-9]+\d*$/           then data.to_i
+      when /\d{4}-\d\d-\d\d/       then Date.parse(data)
+      when /^(\d+\s){2,}[0-9 ]*$/  then data.split.collect { |i| i.to_i }
       when /^\s*$/                 then nil
       when "Y"                     then true
       when "N"                     then false
-      else                         string.strip
+      else                         data.strip
       end
     end
-    
+
+    # Convert Ruby objects to HostConnect formatted data
+    def self.to_hc(data)
+      case data
+      when Integer                 then data.to_s
+      when Date                    then data.to_s
+      when nil                     then ""
+      when true                    then "Y"
+      when false                   then "N"
+      else                         data.strip
+      end
+    end
+
     # Currently we use a separate method for times, since they come in a format
     # which probably is too general for regexp. I.e "2310"
     def self.time(string)
       Time.parse(string[0,2] << ":" << string[2,4])
     end
-    
+
     def self.price(string)
       string.to_i / 100
     end

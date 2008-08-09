@@ -10,5 +10,4 @@
 
 ## Dev docs
 * hostConnect API doc: http://www.tourplan.com/support/Connector/hostConnect_2_04_170.html
-* Xml-Simple: http://xml-simple.rubyforge.org/
 * Builder: http://builder.rubyforge.org/

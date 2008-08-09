@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE Reply SYSTEM "http://www.tourplan.com/support/connector/hostConnect_2_04_170.dtd">
+<Reply>
+  <GetBookingReply>
+    <BookingId>6051</BookingId>
+    <Ref>ASIN100102</Ref>
+    <BookingUpdateCount>61</BookingUpdateCount>
+    <Name>Jessop Mr/Mrs</Name>
+    <QB>B</QB>
+    <Consult></Consult>
+    <AgentRef></AgentRef>
+    <Email>Test av kontaktinfo</Email>
+    <TravelDate>2008-10-08</TravelDate>
+    <EnteredDate>2008-07-30</EnteredDate>
+    <BookingStatus>Internet Booking</BookingStatus>
+    <ReadOnly>N</ReadOnly>
+    <IsInternetBooking>Y</IsInternetBooking>
+    <Currency>EUR</Currency>
+    <TotalPrice>131800</TotalPrice>
+    <Remarks></Remarks>
+    <Dialogue></Dialogue>
+    <Services>
+      <Service>
+        <ServiceLineId>55440</ServiceLineId>
+        <ServiceLineUpdateCount>3</ServiceLineUpdateCount>
+        <Opt>OSLRTASFIPA10001O</Opt>
+        <OptionNumber>5614</OptionNumber>
+        <Date>2008-10-08</Date>
+        <SequenceNumber>10</SequenceNumber>
+        <Adults>2</Adults>
+        <Children>0</Children>
+        <RoomType>TW</RoomType>
+        <LinePrice>131800</LinePrice>
+        <SCUqty>1</SCUqty>
+        <Status>RQ</Status>
+      </Service>
+    </Services>
+  </GetBookingReply>
+</Reply>
+

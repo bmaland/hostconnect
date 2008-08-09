@@ -1,7 +1,5 @@
-nbproject
-doc/*
-coverage/*
+doc
+pkg
+coverage
 test.rb
-config.yml
-*.swp
-
+Manifest

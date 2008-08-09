@@ -6,28 +6,28 @@ module HostConnect
     def each
       elements.each { |e| yield e }
     end
-    
+
     # Returns the first element
     def first
       elements.first
     end
-    
+
     # Returns the last element
     def last
       elements.last
     end
-    
+
     # Act like an array
     def [](num)
       elements[num]
     end
-    
+
     # Exposes the element-array of responses which consists of multiple elements.
     # Raises an error if used on non-collection responses (Ping etc).
     def elements
       (@elements.blank?) ? raise(ArgumentError, "Not a collection") : @elements
     end
-    
+
     protected
     def parse(xml)
       @data = Hpricot.XML xml
@@ -35,7 +35,7 @@ module HostConnect
       unless error_reply.blank?
         error_msg = error_reply.innerHTML
         error_code = error_msg[0..3].to_i
-        
+
         # See http://www.tourplan.com/support/Connector/ErrorMessages.html
         error_description = case error_code
                             when 1000 then "General error."
@@ -79,18 +79,18 @@ module HostConnect
                             when 5001 then "The specified ServiceLineUpdateCount is no longer valid; request rejected."
                             else           "Unknown error."
                             end
-        
+
         HostConnect.logger.fatal "Exception thrown!"
         raise ArgumentError, error_msg << " (" << error_description << ")"
       end
     end
-    
+
     private
     def initialize(xml)
       parse xml
-      (respond_to? :size) ? populate : set_attrs
+      private_methods.include?("populate") ? populate : set_attrs
     end
-    
+
     # Sets all instance variables. This only works for the simple requests.
     # For convenience, query methods gets defined for booleans.
     def set_attrs
@@ -98,10 +98,18 @@ module HostConnect
       @data.search("/Reply/" << class_name) do |n|
         n.containers.each do |e|
           var = e.name.underscore
-          value = Coercion.coerce(Hpricot.uxs(e.innerHTML)) # Need to figure out how to stop Hpricot from escaping entities
+
+          # Special treatment for variables that end with "_price"
+          if var =~ /_price$/
+            value = Coercion.price(Hpricot.uxs(e.innerHTML))
+          else
+            value = Coercion.from_hc(Hpricot.uxs(e.innerHTML))
+          end
+
           if value.kind_of?(FalseClass) || value.kind_of?(TrueClass)
             eval "def #{var}?; #{var}; end"
           end
+
           instance_variable_set("@#{var}", value)
           self.class.class_eval "attr_reader :#{var}"
         end
@@ -109,4 +117,3 @@ module HostConnect
     end
   end
 end
-
