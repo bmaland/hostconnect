@@ -1,4 +1,6 @@
 doc
+pkg
 coverage
 test.rb
-config.yml
+hostconnect.gemspec
+Manifest
