@@ -58,7 +58,7 @@ describe HostConnect::Coercion do
     end
   end
 
-  describe "Conversion of parameters from Ruby objects to strings" do
+  describe "Conversion of parameters from Ruby objects to HC formatted strings" do
     it "should turn dates into strings" do
       date = Coercion.to_hc("1985-10-24")
       date.should == "1985-10-24"
@@ -80,6 +80,15 @@ describe HostConnect::Coercion do
     it "should handle nil values and empty strings" do
       Coercion.to_hc(nil).should == ""
       Coercion.to_hc("   ").should == ""
+    end
+
+    it "should know about room types" do
+      Coercion.to_hc("Single").should == "SG"
+      Coercion.to_hc("Twin").should == "TW"
+      Coercion.to_hc("Double").should == "DB"
+      Coercion.to_hc("Triple").should == "TR"
+      Coercion.to_hc("Quad").should == "QD"
+      Coercion.to_hc("Twinn").should == "Twinn"
     end
   end
 end

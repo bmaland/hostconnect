@@ -33,10 +33,10 @@
     <Opt>LONACCUMLONSTDBCB</Opt>
     <DateFrom>2007-10-07</DateFrom>
     <SCUqty>2</SCUqty>
-    <UserText1>+4799999999</UserText1>
-    <UserText2>contact@email.net</UserText2>
-    <UserText3>Norway</UserText3>
-    <UserText4>N</UserText4>
-    <UserText5>Smoking</UserText5>
+    <UDText1>+4799999999</UDText1>
+    <UDText2>contact@email.net</UDText2>
+    <UDText3>Norway</UDText3>
+    <UDText4>N</UDText4>
+    <UDText5>Smoking</UDText5>
   </AddServiceRequest>
 </Request>

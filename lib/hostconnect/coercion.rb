@@ -35,6 +35,11 @@ module HostConnect
       when nil                     then ""
       when true                    then "Y"
       when false                   then "N"
+      when "Single"                then "SG"
+      when "Twin"                  then "TW"
+      when "Double"                then "DB"
+      when "Triple"                then "TR"
+      when "Quad"                  then "QD"
       else                         data.strip
       end
     end
