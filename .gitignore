@@ -3,3 +3,5 @@ pkg
 coverage
 test.rb
 Manifest
+*.dtd
+*.gem

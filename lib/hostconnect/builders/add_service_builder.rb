@@ -3,14 +3,12 @@ module HostConnect
   # service to a (new or existing) booking. Note that for a service to be added
   # to an existing booking the agent adding the service must be the same as the
   # agent who made the original booking.
-  #
-  # TODO problems with remarks
   class AddServiceBuilder < AbstractBuilder
     def initialize(options = {})
       @valid_options = [ :agent_id, :password, :new_booking_info, :opt, :date_from,
                          :scu_qty, :room_configs, :email, :pu_time, :pu_remark,
-                         :do_time, :do_remark, :remarks, :user_text1, :user_text2,
-                         :user_text3, :user_text4, :user_text5 ].freeze
+                         :do_time, :do_remark, :remarks, :ud_text1, :ud_text2,
+                         :ud_text3, :ud_text4, :ud_text5 ].freeze
       super(options)
     end
 
@@ -41,11 +39,11 @@ module HostConnect
           x.doTime @do_time if @do_time
           x.doRemark @do_remark if @do_remark
           x.Remarks @remarks if @remarks
-          x.UserText1 @user_text1 if @user_text1
-          x.UserText2 @user_text2 if @user_text2
-          x.UserText3 @user_text3 if @user_text3
-          x.UserText4 Coercion.to_hc(@user_text4) unless @user_text4.nil?
-          x.UserText5 @user_text5 if @user_text5
+          x.UDText1 @ud_text1 if @ud_text1
+          x.UDText2 @ud_text2 if @ud_text2
+          x.UDText3 @ud_text3 if @ud_text3
+          x.UDText4 Coercion.to_hc(@ud_text4) unless @ud_text4.nil?
+          x.UDText5 @ud_text5 if @ud_text5
         }
       }
       x
