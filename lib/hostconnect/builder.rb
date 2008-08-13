@@ -9,7 +9,7 @@ module HostConnect
 
     # Send xml to server. Returns a new object.
     def submit
-      obj = ActiveSupport::Inflector.constantize(self.class.to_s.gsub(/Builder/, ''))
+      obj = Inflector.constantize(self.class.to_s.gsub(/Builder/, ''))
       obj.new( Client.post_xml_request(to_s) )
     end
 
