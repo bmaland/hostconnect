@@ -41,7 +41,8 @@ module HostConnect
                 else               raise ArgumentError, 'Incorrect environment: ' << env.to_s
                 end
 
-    @@logger = Logger.new("log/" << env.to_s << ".log")
+    log_path = config[:log_path] || "log/"
+    @@logger = Logger.new(log_path << env.to_s << ".log")
     @@logger.level = log_level
     @@logger.datetime_format = "%Y-%d-%m %H:%M:%S"
   end

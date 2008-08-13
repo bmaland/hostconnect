@@ -17,6 +17,7 @@ which is a web service interface for tour booking."
   p.dependencies = ["activesupport", "hpricot", "builder"]
   p.ignore_pattern = FileList[".gitignore"]
   p.include_rakefile = true
+  p.rubygems_version >= "1.2.0"
 end
 
 task :default => 'spec'
