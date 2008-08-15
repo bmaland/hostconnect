@@ -14,8 +14,9 @@ module HostConnect
 
           HostConnect.logger.debug "Response:\n" << response.body
         rescue Exception
-          HostConnect.logger.fatal "Exception thrown - No data returned from HostConnect"
-          raise Exception, "No data returned from HostConnect - connection time out?"
+          error_description = "Error occured while sending data to HostConnect"
+          HostConnect.logger.fatal "Exception thrown: " + error_description
+          raise Exception, error_description
         ensure
           http_connection.finish if http_connection.started?
         end

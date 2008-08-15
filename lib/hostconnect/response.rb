@@ -80,7 +80,7 @@ module HostConnect
                             else           "Unknown error."
                             end
 
-        HostConnect.logger.fatal "Exception thrown!"
+        HostConnect.logger.fatal "Exception thrown: " + error_description
         raise ArgumentError, error_msg << " (" << error_description << ")"
       end
     end

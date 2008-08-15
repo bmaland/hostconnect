@@ -38,12 +38,13 @@ module HostConnect
                 when :test         then Logger::WARN
                 when :development  then Logger::DEBUG
                 when :production   then Logger::ERROR
-                else               raise ArgumentError, 'Incorrect environment: ' << env.to_s
+                else               raise ArgumentError, 'Incorrect environment: ' + env.to_s
                 end
 
     log_path = config[:log_path] || "log/"
-    @@logger = Logger.new(log_path << env.to_s << ".log")
+    @@logger = Logger.new(log_path + env.to_s + ".log")
     @@logger.level = log_level
+    @@logger.formatter = Logger::Formatter.new
     @@logger.datetime_format = "%Y-%d-%m %H:%M:%S"
   end
 
