@@ -6,7 +6,7 @@ pwd = File.dirname(__FILE__)
 $LOAD_PATH.unshift(pwd)
 
 # Require dependencies
-%w[rubygems net/https builder date time ostruct hpricot
+%w[rubygems net/https builder date time ostruct hpricot rtf
    active_support yaml logger].each { |lib| require lib }
 
 # Require HostConnect files

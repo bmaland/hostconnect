@@ -8,7 +8,8 @@ module HostConnect
       @valid_options = [ :agent_id, :password, :new_booking_info, :opt, :date_from,
                          :scu_qty, :room_configs, :email, :pu_time, :pu_remark,
                          :do_time, :do_remark, :remarks, :ud_text1, :ud_text2,
-                         :ud_text3, :ud_text4, :ud_text5 ].freeze
+                         :ud_text3, :ud_text4, :ud_text5, :agent_ref,
+                         :service_line_notes ].freeze
       super(options)
     end
 
@@ -30,10 +31,17 @@ module HostConnect
             }
           end
 
+          if @service_line_notes
+            x.ServiceLineNotes { |i|
+              @service_line_notes.each { |note| i << note.to_xml.target! }
+            }
+          end
+
           x.Opt @opt if @opt
           x.DateFrom @date_from if @date_from
           x.SCUqty @scu_qty if @scu_qty
           x.Email @email if @email
+          x.AgentRef @agent_ref if @agent_ref
           x.puTime @pu_time if @pu_time
           x.puRemark @pu_remark if @pu_remark
           x.doTime @do_time if @do_time
