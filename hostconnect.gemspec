@@ -1,7 +1,7 @@
 --- !ruby/object:Gem::Specification 
 name: hostconnect
 version: !ruby/object:Gem::Version 
-  version: 0.1.0
+  version: 0.1.1
 platform: ruby
 authors: 
 - "Bj\xC3\xB8rn Arild M\xC3\xA6land"
@@ -33,6 +33,16 @@ dependencies:
     version: 
 - !ruby/object:Gem::Dependency 
   name: builder
+  type: :runtime
+  version_requirement: 
+  version_requirements: !ruby/object:Gem::Requirement 
+    requirements: 
+    - - ">="
+      - !ruby/object:Gem::Version 
+        version: "0"
+    version: 
+- !ruby/object:Gem::Dependency 
+  name: rtf
   type: :runtime
   version_requirement: 
   version_requirements: !ruby/object:Gem::Requirement 

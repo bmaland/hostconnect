@@ -23,7 +23,7 @@ module HostConnect
   module Version
     MAJOR = '0'
     MINOR = '1'
-    REVISION = '0'
+    REVISION = '1'
     def self.combined
       [MAJOR, MINOR, REVISION].join('.')
     end
@@ -31,7 +31,7 @@ module HostConnect
 
   def setup(env, config)
     config[:dtd] =
-      'http://www.tourplan.com/support/Connector/hostConnect_' << config[:version] << '.dtd'
+      'http://www.tourplan.com/support/Connector/hostConnect_' + config[:version] + '.dtd'
     @@config = OpenStruct.new config
 
     log_level = case env

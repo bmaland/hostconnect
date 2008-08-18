@@ -14,10 +14,9 @@ Echoe.new(PROJECT) do |p|
   p.summary = "Library for interfacing with Tourplan's hostConnect software,
 which is a web service interface for tour booking."
   p.url = "http://www.github.com/Chrononaut/hostconnect/"
-  p.dependencies = ["activesupport", "hpricot", "builder"]
+  p.dependencies = ["activesupport", "hpricot", "builder", "rtf"]
   p.ignore_pattern = FileList[".gitignore"]
   p.include_rakefile = true
-  p.rubygems_version >= "1.2.0"
 end
 
 task :default => 'spec'

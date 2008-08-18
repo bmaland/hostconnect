@@ -1,5 +1,5 @@
-doc
-pkg
+doc/*
+pkg/*
 coverage
 test.rb
 Manifest
