@@ -1,14 +1,14 @@
 --- !ruby/object:Gem::Specification 
 name: hostconnect
 version: !ruby/object:Gem::Version 
-  version: 0.1.1
+  version: 0.1.2
 platform: ruby
 authors: 
 - "Bj\xC3\xB8rn Arild M\xC3\xA6land"
 autorequire: 
 bindir: bin
 
-date: 2008-08-18 00:00:00 +02:00
+date: 2008-08-28 00:00:00 +02:00
 default_executable: 
 dependencies: 
 - !ruby/object:Gem::Dependency 
@@ -88,6 +88,7 @@ extra_rdoc_files:
 - lib/hostconnect/coercion.rb
 - lib/hostconnect/core_extensions/string.rb
 - lib/hostconnect/core_extensions/symbol.rb
+- lib/hostconnect/translation.rb
 - lib/hostconnect/responses/agent_info.rb
 - lib/hostconnect/responses/get_services.rb
 - lib/hostconnect/responses/list_bookings.rb
@@ -106,6 +107,7 @@ files:
 - Rakefile
 - README.markdown
 - CHANGELOG
+- hostconnect.gemspec
 - lib/hostconnect.rb
 - lib/hostconnect/builders/agent_info_builder.rb
 - lib/hostconnect/builders/pax_details_builder.rb
@@ -124,6 +126,7 @@ files:
 - lib/hostconnect/coercion.rb
 - lib/hostconnect/core_extensions/string.rb
 - lib/hostconnect/core_extensions/symbol.rb
+- lib/hostconnect/translation.rb
 - lib/hostconnect/responses/agent_info.rb
 - lib/hostconnect/responses/get_services.rb
 - lib/hostconnect/responses/list_bookings.rb
@@ -176,9 +179,9 @@ files:
 - spec/responses/add_service_spec.rb
 - spec/responses/ping_spec.rb
 - spec/responses/get_locations_spec.rb
+- spec/translation_spec.rb
 - spec/coercion_spec.rb
 - Manifest
-- hostconnect.gemspec
 has_rdoc: true
 homepage: http://www.github.com/Chrononaut/hostconnect/
 post_install_message: 
