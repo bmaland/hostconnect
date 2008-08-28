@@ -10,7 +10,7 @@ module HostConnect
       x = Builder::XmlMarkup.new(:indent => 2, :margin => 3)
       x.RoomConfig {
         x.Adults @adults if @adults
-        x.RoomType Coercion.to_hc(@room_type) if @room_type
+        x.RoomType @room_type if @room_type
 
         if @pax_list
           # Stack the PaxDetails builder objects onto the request

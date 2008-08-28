@@ -81,14 +81,5 @@ describe HostConnect::Coercion do
       Coercion.to_hc(nil).should == ""
       Coercion.to_hc("   ").should == ""
     end
-
-    it "should know about room types" do
-      Coercion.to_hc("Single").should == "SG"
-      Coercion.to_hc("Twin").should == "TW"
-      Coercion.to_hc("Double").should == "DB"
-      Coercion.to_hc("Triple").should == "TR"
-      Coercion.to_hc("Quad").should == "QD"
-      Coercion.to_hc("Twinn").should == "Twinn"
-    end
   end
 end

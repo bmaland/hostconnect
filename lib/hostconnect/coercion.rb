@@ -1,19 +1,18 @@
 module HostConnect
+  # Coercion
+  #
+  # Possible Types:
+  # * String
+  # * Strings with multiple lines (don't know yet if these must be handled specifically)
+  # * Boolean (Y/N)
+  # * Date (yyyy-mm-dd)
+  # * Time (hhmm)
+  # * Integer
+  # * Integer list (In an integer list, a single space is used to separate integer values.)
+  # * Price (Prices returned are Tourplan prices multiplied by 100, + currency stuff..)
+  #
+  # It must be possible to convert this data from/to native Ruby objects
   class Coercion
-    # Coercion
-    #
-    # Possible Types:
-    # * String
-    # * Strings with multiple lines (don't know yet if these must be handled specifically)
-    # * Boolean (Y/N)
-    # * Date (yyyy-mm-dd)
-    # * Time (hhmm)
-    # * Integer
-    # * Integer list (In an integer list, a single space is used to separate integer values.)
-    # * Price (Prices returned are Tourplan prices multiplied by 100, + currency stuff..)
-    #
-    # It must be possible to convert this data from/to native Ruby objects
-
     # Convert HostConnect formatted data to Ruby objects
     def self.from_hc(data)
       case data
@@ -35,11 +34,6 @@ module HostConnect
       when nil                     then ""
       when true                    then "Y"
       when false                   then "N"
-      when "Single"                then "SG"
-      when "Twin"                  then "TW"
-      when "Double"                then "DB"
-      when "Triple"                then "TR"
-      when "Quad"                  then "QD"
       else                         data.strip
       end
     end

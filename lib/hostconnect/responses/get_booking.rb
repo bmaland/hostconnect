@@ -6,10 +6,12 @@ module HostConnect
 
       @services = []
       @data.search("/Reply/GetBookingReply/Services/Service").each do |service|
-        s = Struct.new(:service_line_id, :service_line_update_count, :opt).new
+        s = Struct.new(:service_line_id, :service_line_update_count, :opt,
+                       :status).new
         s.service_line_id = (service/"ServiceLineId").innerHTML.to_i
         s.service_line_update_count = (service/"ServiceLineUpdateCount").innerHTML.to_i
         s.opt = (service/"Opt").innerHTML
+        s.status = (service/"Status").innerHTML
 
         @services << s
       end

@@ -10,7 +10,7 @@ $LOAD_PATH.unshift(pwd)
    active_support yaml logger].each { |lib| require lib }
 
 # Require HostConnect files
-%w[client response builder rtf_document
+%w[client response builder rtf_document translation
    coercion].each { |lib| require "#{pwd}/hostconnect/#{lib}" }
 
 Dir.glob("#{pwd}/hostconnect/builders/*.rb").each { |file| require file }

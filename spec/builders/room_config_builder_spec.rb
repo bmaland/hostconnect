@@ -46,10 +46,10 @@ END
     pax2 = PaxDetailsBuilder.new(:title => "Mrs", :forename => "Sally", :surname => "Jardim",
       :pax_type => "A", :date_of_birth => "1980-12-24")
 
-    room = RoomConfigBuilder.new(:adults => 1, :room_type => "Twin", :pax_list => [ pax1 ])
+    room = RoomConfigBuilder.new(:adults => 1, :room_type => "TW", :pax_list => [ pax1 ])
     room.to_s.should == @room_xml_1
 
-    room = RoomConfigBuilder.new(:adults => 2, :room_type => "Twin", :pax_list => [ pax1, pax2 ])
+    room = RoomConfigBuilder.new(:adults => 2, :room_type => "TW", :pax_list => [ pax1, pax2 ])
     room.to_s.should == @room_xml_2
   end
 
