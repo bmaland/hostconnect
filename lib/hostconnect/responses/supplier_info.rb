@@ -1,15 +1,15 @@
 module HostConnect
   class SupplierInfo < AbstractResponse
     include Enumerable
-    
+
     def size
       @size ||= @data.search("/Reply/SupplierInfoReply/Suppliers/Supplier").size
     end
-    
+
     private
     def populate
       @elements = []
-      
+
       @data.search("/Reply/SupplierInfoReply/Suppliers/Supplier").each do |supplier|
         s = Struct.new(:supplier_id, :supplier_code, :name, :address1, :address2,
                        :address3, :address4, :address5, :post_code, :supplier_note).new
@@ -23,7 +23,7 @@ module HostConnect
         s.address5 = (supplier/"Address5").innerHTML
         s.post_code = (supplier/"PostCode").innerHTML
         s.supplier_note = (supplier/"SupplierNotes"/"SupplierNote"/"NoteText").innerHTML
-        
+
         @elements << s
       end
     end

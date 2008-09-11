@@ -17,9 +17,9 @@ module HostConnect
     def self.from_hc(data)
       case data
       when /^[0-9]+\d*$/           then data.to_i
-      when /\d{4}-\d\d-\d\d/       then Date.parse(data)
       when /^(\d+\s){2,}[0-9 ]*$/  then data.split.collect { |i| i.to_i }
       when /^\s*$/                 then nil
+      when /\d{4}-\d\d-\d\d/       then Date.parse(data)
       when "Y"                     then true
       when "N"                     then false
       else                         data.strip
