@@ -1,14 +1,14 @@
 --- !ruby/object:Gem::Specification 
 name: hostconnect
 version: !ruby/object:Gem::Version 
-  version: 0.1.2
+  version: 0.1.3
 platform: ruby
 authors: 
 - "Bj\xC3\xB8rn Arild M\xC3\xA6land"
 autorequire: 
 bindir: bin
 
-date: 2008-08-28 00:00:00 +02:00
+date: 2008-09-11 00:00:00 +02:00
 default_executable: 
 dependencies: 
 - !ruby/object:Gem::Dependency 
