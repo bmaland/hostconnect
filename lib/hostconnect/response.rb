@@ -94,8 +94,8 @@ module HostConnect
     # Sets all instance variables. This only works for the simple requests.
     # For convenience, query methods gets defined for booleans.
     def set_attrs
-      class_name = ActiveSupport::Inflector.demodulize(self.class) << "Reply"
-      @data.search("/Reply/" << class_name) do |n|
+      reply_name = ActiveSupport::Inflector.demodulize(self.class) << "Reply"
+      @data.search("/Reply/" << reply_name) do |n|
         n.containers.each do |e|
           var = e.name.underscore
 
