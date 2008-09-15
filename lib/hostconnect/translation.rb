@@ -2,16 +2,17 @@ module HostConnect
   # Translate to/from HostConnect codes
   class Translation
     GRAMMAR = {
-      "SG" => "Single",
-      "TW" => "Twin",
-      "DB" => "Double",
-      "TR" => "Triple",
-      "QD" => "Quad",
-      "CF" => "Confirmed",
-      "CX" => "Cancelled",
-      "FQ" => "FIT Quote",
-      "IN" => "Internet Booking",
-      "RQ" => "Request"
+      "SG"   => "Single",
+      "TW"   => "Twin",
+      "DB"   => "Double",
+      "TR"   => "Triple",
+      "QD"   => "Quad",
+      "CF"   => "Confirmed",
+      "CX"   => "Cancelled",
+      "FQ"   => "FIT Quote",
+      "IN"   => "Internet Booking",
+      "RQ"   => "Request",
+      "CRCD" => "Credit Card Payment"
     }
 
     def self.translate(string)
