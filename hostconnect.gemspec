@@ -1,14 +1,14 @@
 --- !ruby/object:Gem::Specification 
 name: hostconnect
 version: !ruby/object:Gem::Version 
-  version: 0.1.3
+  version: 0.1.4
 platform: ruby
 authors: 
 - "Bj\xC3\xB8rn Arild M\xC3\xA6land"
 autorequire: 
 bindir: bin
 
-date: 2008-09-11 00:00:00 +02:00
+date: 2008-09-15 00:00:00 +02:00
 default_executable: 
 dependencies: 
 - !ruby/object:Gem::Dependency 
@@ -73,6 +73,7 @@ extra_rdoc_files:
 - lib/hostconnect.rb
 - lib/hostconnect/builders/agent_info_builder.rb
 - lib/hostconnect/builders/pax_details_builder.rb
+- lib/hostconnect/builders/record_booking_payment_builder.rb
 - lib/hostconnect/builders/add_service_builder.rb
 - lib/hostconnect/builders/room_config_builder.rb
 - lib/hostconnect/builders/get_booking_builder.rb
@@ -83,6 +84,7 @@ extra_rdoc_files:
 - lib/hostconnect/builders/suppler_info_builder.rb
 - lib/hostconnect/builders/list_bookings_builder.rb
 - lib/hostconnect/builders/option_info_builder.rb
+- lib/hostconnect/builders/get_booking_payment_summary_builder.rb
 - lib/hostconnect/builders/service_line_note_builder.rb
 - lib/hostconnect/builders/ping_builder.rb
 - lib/hostconnect/coercion.rb
@@ -94,7 +96,9 @@ extra_rdoc_files:
 - lib/hostconnect/responses/list_bookings.rb
 - lib/hostconnect/responses/get_locations.rb
 - lib/hostconnect/responses/get_booking.rb
+- lib/hostconnect/responses/record_booking_payment.rb
 - lib/hostconnect/responses/option_info.rb
+- lib/hostconnect/responses/get_booking_payment_summary.rb
 - lib/hostconnect/responses/add_service.rb
 - lib/hostconnect/responses/supplier_info.rb
 - lib/hostconnect/responses/get_system_settings.rb
@@ -111,6 +115,7 @@ files:
 - lib/hostconnect.rb
 - lib/hostconnect/builders/agent_info_builder.rb
 - lib/hostconnect/builders/pax_details_builder.rb
+- lib/hostconnect/builders/record_booking_payment_builder.rb
 - lib/hostconnect/builders/add_service_builder.rb
 - lib/hostconnect/builders/room_config_builder.rb
 - lib/hostconnect/builders/get_booking_builder.rb
@@ -121,6 +126,7 @@ files:
 - lib/hostconnect/builders/suppler_info_builder.rb
 - lib/hostconnect/builders/list_bookings_builder.rb
 - lib/hostconnect/builders/option_info_builder.rb
+- lib/hostconnect/builders/get_booking_payment_summary_builder.rb
 - lib/hostconnect/builders/service_line_note_builder.rb
 - lib/hostconnect/builders/ping_builder.rb
 - lib/hostconnect/coercion.rb
@@ -132,7 +138,9 @@ files:
 - lib/hostconnect/responses/list_bookings.rb
 - lib/hostconnect/responses/get_locations.rb
 - lib/hostconnect/responses/get_booking.rb
+- lib/hostconnect/responses/record_booking_payment.rb
 - lib/hostconnect/responses/option_info.rb
+- lib/hostconnect/responses/get_booking_payment_summary.rb
 - lib/hostconnect/responses/add_service.rb
 - lib/hostconnect/responses/supplier_info.rb
 - lib/hostconnect/responses/get_system_settings.rb

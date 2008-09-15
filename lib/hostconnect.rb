@@ -23,7 +23,7 @@ module HostConnect
   module Version
     MAJOR = '0'
     MINOR = '1'
-    REVISION = '2'
+    REVISION = '4'
     def self.combined
       [MAJOR, MINOR, REVISION].join('.')
     end
