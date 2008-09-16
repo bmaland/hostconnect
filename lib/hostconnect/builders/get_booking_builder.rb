@@ -4,7 +4,7 @@ module HostConnect
   # who made the booking.
   class GetBookingBuilder < AbstractBuilder
     def initialize(options = {})
-      @valid_options = [ :agent_id, :password, :booking_id ].freeze
+      @valid_options = [ :agent_id, :password, :booking_id, :ref ].freeze
       super(options)
     end
 
@@ -14,7 +14,8 @@ module HostConnect
         x.GetBookingRequest {
           x.AgentID @agent_id
           x.Password @password
-          x.BookingId @booking_id
+          x.BookingId @booking_id if @booking_id
+          x.Ref @ref if @ref
         }
       }
       x
