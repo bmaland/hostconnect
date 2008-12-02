@@ -38,14 +38,13 @@ module HostConnect
       end
     end
 
-    # Currently we use a separate method for times, since they come in a format
-    # which probably is too general for regexp. I.e "2310"
+    # Time strings are i.e "2310"
     def self.time(string)
       Time.parse(string[0,2] << ":" << string[2,4])
     end
 
     def self.price(string)
-      string.to_i / 100
+     (string.to_f / 100).round
     end
   end
 end
