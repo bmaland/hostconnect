@@ -11,3 +11,6 @@
 ## Dev docs
 * hostConnect API doc: http://www.tourplan.com/support/Connector/hostConnect_2_04_170.html
 * Builder: http://builder.rubyforge.org/
+
+## License
+Copyright (c) 2007-2010 Bjørn Arild Mæland. See MIT-LICENSE for details.
