@@ -1,3 +1,4 @@
+v0.1.8 Moved to bundler for dependencies
 v0.1.7 Updated copyright information
 v0.1.6 Correct handling of prices
 v0.1.5 Fixed floating point bug
