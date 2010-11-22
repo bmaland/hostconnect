@@ -5,8 +5,11 @@ pwd = File.dirname(__FILE__)
 # without specifying a full path.
 $LOAD_PATH.unshift(pwd)
 
+require "rubygems"
+require "bundler/setup"
+
 # Require dependencies
-%w[rubygems net/https builder date time ostruct hpricot rtf
+%w[net/https builder date time ostruct hpricot rtf
    active_support yaml logger].each { |lib| require lib }
 
 # Require HostConnect files
@@ -23,7 +26,7 @@ module HostConnect
   module Version
     MAJOR = '0'
     MINOR = '1'
-    REVISION = '6'
+    REVISION = '8'
     def self.combined
       [MAJOR, MINOR, REVISION].join('.')
     end

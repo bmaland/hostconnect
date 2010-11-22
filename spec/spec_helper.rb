@@ -1,6 +1,7 @@
 require 'rubygems'
+require 'bundler/setup'
 require 'pp'
-require 'spec'
+require 'rspec'
 
 require "./lib/hostconnect.rb"
 include HostConnect
