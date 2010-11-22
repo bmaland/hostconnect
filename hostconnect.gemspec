@@ -18,6 +18,7 @@ Gem::Specification.new do |s|
   s.require_path = "lib"
   s.rubyforge_project = %q{hostconnect}
   s.required_rubygems_version = ">= 1.3.6"
+  s.license = "MIT"
 
   s.add_dependency "activesupport", "~> 2.3.10"
   s.add_dependency "builder", "2.1.2"
