@@ -9,7 +9,7 @@ module HostConnect
                          :scu_qty, :room_configs, :email, :pu_time, :pu_remark,
                          :do_time, :do_remark, :remarks, :ud_text1, :ud_text2,
                          :ud_text3, :ud_text4, :ud_text5, :agent_ref,
-                         :service_line_notes ].freeze
+                         :service_line_notes, :rate_id].freeze
       super(options)
     end
 
@@ -36,7 +36,8 @@ module HostConnect
               @service_line_notes.each { |note| i << note.to_xml.target! }
             }
           end
-
+          
+          x.RateId @rate_id
           x.Opt @opt if @opt
           x.DateFrom @date_from if @date_from
           x.SCUqty @scu_qty if @scu_qty
