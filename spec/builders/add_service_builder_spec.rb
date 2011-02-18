@@ -21,6 +21,7 @@ describe HostConnect::AddServiceBuilder do
                                  :pax_list => [ pax1, pax2 ])
     req.room_configs = [ room ]
 
+    req.rate_id = "Default"
     req.opt = "LONACCUMLONSTDBCB"
     req.date_from = "2007-10-07"
     req.scu_qty = "2"

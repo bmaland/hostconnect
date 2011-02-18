@@ -30,6 +30,7 @@
         </PaxList>
       </RoomConfig>
     </RoomConfigs>
+    <RateId>Default</RateId>
     <Opt>LONACCUMLONSTDBCB</Opt>
     <DateFrom>2007-10-07</DateFrom>
     <SCUqty>2</SCUqty>
