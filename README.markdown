@@ -1,5 +1,7 @@
 # Library for connecting to hostConnect
 
+HostConnect is used for connecting the TourPlan (ICOM) back end software with a front end software, usually a website.
+
 ## Notes
 * All variables passing in/out of hostConnect via XML are written in CapitalCamelCase.
   We, however, use snake_case for all parameters/attributes.
@@ -9,7 +11,8 @@
   display the number of results.
 
 ## Dev docs
-* hostConnect API doc: http://www.tourplan.com/support/Connector/hostConnect_2_04_170.html
+* hostConnect API doc: http://www.tourplan.com/support/Connector/
+* Test page for hostConnect XML interface: http://demo.tourplan.com/TAS_AA/conntest.html
 * Builder: http://builder.rubyforge.org/
 
 ## License
