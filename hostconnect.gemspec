@@ -1,12 +1,13 @@
 # -*- encoding: utf-8 -*-
 
-require "lib/hostconnect"
+$:.push File.expand_path("../lib", __FILE__)
+require "hostconnect/version"
 
 Gem::Specification.new do |s|
   s.name = %q{hostconnect}
-  s.version = HostConnect::Version.combined
+  s.version = HostConnect::VERSION
   s.platform = Gem::Platform::RUBY
-  s.authors = ["Bjørn Arild Mæland"]
+  s.authors = ["Bjørn Arild Mæland", "Amund Sivertsen"]
   s.description = %q{Library for interfacing with Tourplan's hostConnect software, which is a web service interface for tour booking.}
   s.summary = %q{Library for interfacing with Tourplan's hostConnect software, which is a web service interface for tour booking.}
   s.email = %q{bjorn.maeland@gmail.com}

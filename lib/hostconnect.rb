@@ -23,15 +23,6 @@ Dir.glob("#{pwd}/hostconnect/core_extensions/*.rb").each { |file| require file }
 module HostConnect
   extend self
 
-  module Version
-    MAJOR = '0'
-    MINOR = '1'
-    REVISION = '9'
-    def self.combined
-      [MAJOR, MINOR, REVISION].join('.')
-    end
-  end
-
   def setup(env, config)
     config[:dtd] =
       'http://www.tourplan.com/wp-content/uploads/2012/04/hostConnect_' + config[:version] + '.dtd.txt'
