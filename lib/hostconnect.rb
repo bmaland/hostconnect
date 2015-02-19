@@ -34,7 +34,7 @@ module HostConnect
 
   def setup(env, config)
     config[:dtd] =
-      'http://www.tourplan.com/support/Connector/hostConnect_' + config[:version] + '.dtd'
+      'http://www.tourplan.com/wp-content/uploads/2012/04/hostConnect_' + config[:version] + '.dtd.txt'
     @@config = OpenStruct.new config
 
     log_level = case env
