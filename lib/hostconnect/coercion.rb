@@ -44,7 +44,8 @@ module HostConnect
     end
 
     def self.price(string)
-     (string.to_f / 100).round
+     string.to_i
+     #(string.to_f / 100).round
     end
   end
 end
