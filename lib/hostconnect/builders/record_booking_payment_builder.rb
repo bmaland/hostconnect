@@ -8,14 +8,14 @@ module HostConnect
 
     def to_xml
       x = bare
-      amount = (@amount.to_f * 100).to_i # Format amount for HostConnect
+      #amount = (@amount.to_f * 100).to_i # Format amount for HostConnect
       x.Request {
         x.RecordBookingPaymentRequest {
           x.AgentID @agent_id
           x.Password @password
           x.BookingId @booking_id
           x.Currency @currency
-          x.Amount amount
+          x.Amount @amount
           x.ReceiptType @receipt_type
         }
       }
