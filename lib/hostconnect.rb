@@ -25,7 +25,7 @@ module HostConnect
 
   def setup(env, config)
     config[:dtd] =
-      'http://80.252.184.34:8080/iCom/hostConnect_' + config[:version] + '.dtd'
+      'http://83.140.33.126:8080/iCom/hostConnect_' + config[:version] + '.dtd'
     @@config = OpenStruct.new config
 
     log_level = case env
