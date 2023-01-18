@@ -1,6 +1,6 @@
 source "http://rubygems.org"
 
-gem "activesupport", "~> 2.3.10"
+gem "activesupport", "~> 6.1.7"
 gem "builder", "2.1.2"
 gem "hpricot"
 gem "rtf"
